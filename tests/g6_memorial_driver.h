@@ -1,0 +1,10 @@
+#pragma once
+#include "g2_natural_driver.h"
+namespace g6memorial {
+inline void originalSave(G2NaturalDriver& r,TilePosition tile,int slot,int answer=0){
+ r.walk(tile);r.move(Direction::Up);r.tick(key());need(r.game.mode()==ApplicationMode::Saving,"Original legal save absent");for(int n=0;n<200;++n){r.tick();}if(answer==2){r.tick(key(InputAction::Cancel));need(r.game.mode()==ApplicationMode::Saving&&!r.game.fileMenuView(),"CE56 cancel0 left question");r.tick(key(InputAction::Down));r.tick(key());need(r.game.mode()==ApplicationMode::Playing,"CE56 No stuck");return;}r.tick(key());need(r.game.fileMenuView().has_value(),"Original file menu absent");if(answer==1){r.tick(key(InputAction::Cancel));need(r.game.mode()==ApplicationMode::Playing,"Original save cancel stuck");return;}for(int n=1;n<slot;++n){r.tick(key(InputAction::Down));}r.tick(key());if(auto v=r.game.fileMenuView();v&&v->confirmation){if(v->answer){r.tick(key(InputAction::Up));}r.tick(key());}need(r.game.mode()==ApplicationMode::Playing,"Original save failed");
+}
+inline void reception(G2NaturalDriver& r){for(const auto* id:{"m196-e5","m195-e2"}){r.actObject(id);}need(r.game.mapId()==200,"Original return lift absent");r.walk({14,16});r.settle();r.actObject("m200-e2");need(r.game.mapId()==159&&r.game.session().flag(531),"Actual return reflection absent");}
+inline void memorial(G2NaturalDriver& r){for(const auto* id:{"m159-e4","m156-e2","m155-e6","m157-e15","m160-e10","m162-e13"}){r.actObject(id);}need(r.game.mapId()==163,"Natural memorial entry absent");r.actObject("m163-e9");need(r.game.session().flag(555)&&r.game.foreground()==ForegroundKind::None&&r.game.session().flag(1)&&r.game.session().flag(18),"Memorial claim/grant/control tail missing");const auto state=r.game.session().exportState();r.actObject("m163-e9");need(r.game.session().count(21)==state.inventory.at(21)&&r.game.session().magazine(21)==state.magazines.at(21),"Memorial repeated reward/refilled ammo");}
+inline void memorialBack(G2NaturalDriver& r){for(const auto* id:{"m163-e3","m162-e6","m160-e7","m157-e2","m155-e5","m156-e5"}){r.actObject(id);}need(r.game.mapId()==159,"Original six memorial return doors absent");}
+}

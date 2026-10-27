@@ -1,0 +1,41 @@
+{
+  "schema": "nobihaza.local-compile-contract.v1",
+  "inputs": {
+    "dekisugi": {
+      "sha256": "e20377e65aa937bda243e39b92ed57c1795c77d37369998d1fb03653fbdb9f75",
+      "output": "src/game/dekisugi_program.inc",
+      "output_sha256": "758823b2b30b881d5f8a68eb161439f55e9114b0b27ada417187d4850a75a3bc"
+    },
+    "dora": {
+      "sha256": "9e0133b537fa3953c7748219ded917554ed6d20cac5468ff56f9818dcfd61890",
+      "output": "src/game/dora_program.inc",
+      "output_sha256": "de5679cd3c046fe25099396aba0d9a5ab45130b49562313185756eccca610f55"
+    },
+    "cash": {
+      "sha256": "847ee2e0a2c783024838322322fcd3c1106cd0d1b9fbc8d7e106e173fccf2108",
+      "output": "src/game/cash_program.inc",
+      "output_sha256": "866214ef3402b9a13391fd548b2550461be41b8fb9c3f8fa41144ae488f761b0"
+    },
+    "warehouse": {
+      "sha256": "0ec816eb5fdbc4d2c3cc1823c0f925991df893d62927ccb79f91f42055f19127",
+      "output": "src/game/warehouse_g4_program.inc",
+      "output_sha256": "d87cb34547994866ae99bb0f1645ffeb7b2d7b83142bfba91dbe306e43694899"
+    },
+    "final": {
+      "sha256": "74970d6fe8ec3f769fb0e1b45267625943b4362e27db43e057306cdaa8336078",
+      "output": "src/game/final_boss_program.inc",
+      "output_sha256": "e5e4e43d975f0e3ae5b96aea3f77517b90325dc6a3e5bf69c4877768158d60d6"
+    },
+    "doors": {
+      "sha256": "10418b0c89a8ec2740906e364fcb35ccc9f57e609e61430e72ece1278c718bc1",
+      "output": "tools/g3-route-doors.inc",
+      "output_sha256": "6ef45cdc2382764057bd91036362b03bb098ec7e72ee56f339f03dd66deac9db"
+    },
+    "cold": {
+      "sha256": "8f9d62e0fd7777081b95aac6b27b8c025e20806abbd60a60abb4bb96beee3abc",
+      "output": "tools/g3-access-cold-room.inc",
+      "output_sha256": "3cc2dae444009be9621756fc738f9cd3687f5b3c1fc114cdc4ee9d375c5536b0"
+    }
+  },
+  "text_fixture_sha256": "2d12a6c13f5bb6cee539956b2c87be23bb87779c4bd973ba1f143dc15276978d"
+}

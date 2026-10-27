@@ -1,0 +1,2760 @@
+{
+  "version": 2,
+  "status": "complete-source-candidate",
+  "content_contract": "nobihaza.public-complete-source.v1",
+  "license_scope": "MIT covers handwritten project implementation/documentation only; original-expression includes/text goldens, original content/assets/fonts/music, dependencies and trademarks retain their own rights and terms",
+  "requirements": [
+    "C++20 compiler, CMake >=3.28, Ninja and pinned dependencies; no private content input is required to build nobihaza",
+    "Use tools/fetch_runtime.py to restore the separately distributed, hash-locked runtime before playing; Windows and full gameplay acceptance are separate"
+  ],
+  "files": [
+    {
+      "source": "docs/release/public-complete-templates/.gitignore",
+      "path": ".gitignore",
+      "sha256": "9d19775746540829c285a378536e970db0514614c87380d158f6aa6078dfb51f",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "docs/release/public-complete-templates/CMakeLists.txt",
+      "path": "CMakeLists.txt",
+      "sha256": "55ff19c36d0f84352515e860dc36000548c69ab79c41ddaa5c66638d51b14d20",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "docs/release/public-complete-templates/CMakePresets.json",
+      "path": "CMakePresets.json",
+      "sha256": "7892da25a1d74759914f3c09909d58ab3ae463f1b2f8743398009896c3f96628",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "docs/release/public-complete-templates/LICENSE",
+      "path": "LICENSE",
+      "sha256": "207e3fe147b4a1ef21c900a3d784230a87724c94d0641d9c83a009eda03635d7",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "docs/release/public-complete-templates/README.md",
+      "path": "README.md",
+      "sha256": "d6a4894d17a50c0810df40f272872d0a61cca704eabe2f32eb3451a816e58c8d",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "docs/release/public-complete-templates/THIRD-PARTY-NOTICES.md",
+      "path": "THIRD-PARTY-NOTICES.md",
+      "sha256": "974842bdf63990fec68e5dc1ee1d8789de93f007e7c609bcae3fff3545295472",
+      "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
+    },
+    {
+      "source": "learning/toolchain-probe/main.cpp",
+      "path": "learning/toolchain-probe/main.cpp",
+      "sha256": "c4003c241427d8df18346a069a9f1b8075d354b04ba7058fdbe925c7e8c7194b",
+      "basis": "handwritten pinned build/probe declaration; private relative test paths retained and documented as unavailable"
+    },
+    {
+      "source": "src/RoomMap.cpp",
+      "path": "src/RoomMap.cpp",
+      "sha256": "b7911691d97eb9e40da8a59a013c0008ebbab8700b3269e85adf46d0b65f6777",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/RoomMap.h",
+      "path": "src/RoomMap.h",
+      "sha256": "012400f256af80496dc24fdf27877efd383a987f2db41a0ec50e4d94c19ebaa9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/acid_projectile.cpp",
+      "path": "src/game/acid_projectile.cpp",
+      "sha256": "6491daf80c7a45d11cc754e671a130240fe533df3112af479d2364f70b43af41",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/acid_projectile.h",
+      "path": "src/game/acid_projectile.h",
+      "sha256": "1deae39e0dfb1e6235c66cdf990308beaf8577b24af7c0b407a7fdf9c486450e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/app_resources.cpp",
+      "path": "src/game/app_resources.cpp",
+      "sha256": "616361859fdd10972aebb1e418f6c9fcc54df35f23aeda229267efba33f6e2dc",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/app_resources.h",
+      "path": "src/game/app_resources.h",
+      "sha256": "ad97f955ab50de6de6c1a4400332566bcfd1991502072eaf7038b1a53deb1d18",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/app_resources_mac.mm",
+      "path": "src/game/app_resources_mac.mm",
+      "sha256": "ebe33e1a683f93f0d3569d825e92ea9e4920e0c50530dd3d25b07b0585aace77",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/area2_content.cpp",
+      "path": "src/game/area2_content.cpp",
+      "sha256": "f9e1f13782438ed3daf62f351a770299ed17db24319b70bd46b5dc273c862610",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/area3_content.cpp",
+      "path": "src/game/area3_content.cpp",
+      "sha256": "b5ce65ee5ab13d7a280638bb54278167b284c9743d95288ade28acf598cfe84d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/background_content.cpp",
+      "path": "src/game/background_content.cpp",
+      "sha256": "ddceb339d607de60c88acc334dd646a1871369e0942426b3e82ad6003b86ad54",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/bonus_content.cpp",
+      "path": "src/game/bonus_content.cpp",
+      "sha256": "452c9c7527fc7c535f5e9ce6c40cd7bfd8ae130890b76e471461ced0df0cfeae",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_blue.cpp",
+      "path": "src/game/branch_blue.cpp",
+      "sha256": "a750c11c28f4915c33e23f726f161b8488a326dff2eeaecdebfcb0a848901b32",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_content.cpp",
+      "path": "src/game/branch_content.cpp",
+      "sha256": "3f8f1225bc802babe3448e62aa3e4a97d2948e66d243607917b0c52a0164c6d3",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_content.h",
+      "path": "src/game/branch_content.h",
+      "sha256": "c3c61f561e688c9c7cd8d0298e17b638e58fb1c0c7af8b7445477656b96e807b",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_enemy_profile.cpp",
+      "path": "src/game/branch_enemy_profile.cpp",
+      "sha256": "aaafee371a733693dcfc87a734f3a4068b227bd9272e2788aa3a34550d8e395c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_puzzles.cpp",
+      "path": "src/game/branch_puzzles.cpp",
+      "sha256": "5f857d8ae4f40405aaa5ff109602837f99ab8623b39af1a9be932237db1e5414",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_rescues.cpp",
+      "path": "src/game/branch_rescues.cpp",
+      "sha256": "e033e5c3b1a8838da130df6910b2aa871d8eab1190433d4aec93634d99bb546b",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_returns.cpp",
+      "path": "src/game/branch_returns.cpp",
+      "sha256": "7960a7d3e0cc80a1a4b742a207a33ec80520210095db816e64228d021839c141",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/branch_weapons.cpp",
+      "path": "src/game/branch_weapons.cpp",
+      "sha256": "d25f2feb38f878c94428a86d8f6922589121fb7310620f101c0c0d2fca079c50",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cargo_platform_content.cpp",
+      "path": "src/game/cargo_platform_content.cpp",
+      "sha256": "3ea228d50cd3584ce51c8357647e6892b4063c9b548dd8f027b68d7c3f7757b8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cash_content.cpp",
+      "path": "src/game/cash_content.cpp",
+      "sha256": "b1ebce268f88bd237cefc2ca2e910835bc57bb83e116b09a10290db5c3cea9dc",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cash_controller.cpp",
+      "path": "src/game/cash_controller.cpp",
+      "sha256": "a6f6b39d7f62b6ab404aa9d7236b5655a5653dac8985a505595f4431f2f0bb05",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cash_controller.h",
+      "path": "src/game/cash_controller.h",
+      "sha256": "a35a1f8897386762ec1fc699e917f72ca4355dbaf84397f94d7966edb3c69ccb",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cerberus_behavior.cpp",
+      "path": "src/game/cerberus_behavior.cpp",
+      "sha256": "606fda71bea314352b417c7f28a9f9cd53de63cbb2040683b996c1fe2216df30",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cerberus_behavior.h",
+      "path": "src/game/cerberus_behavior.h",
+      "sha256": "049a755e8a53c6f1087355f321bacbcca40bb73c230842e686fc3efd820db000",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/character_animation.cpp",
+      "path": "src/game/character_animation.cpp",
+      "sha256": "cce1330a0056adb00d6f493d0667af03f9194903926affe357806184776f0ca0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/character_animation.h",
+      "path": "src/game/character_animation.h",
+      "sha256": "0eea053dabbb3c04b1a605ab5b8abdb7211b929b4bbdcdc2a0e69b191c1847ad",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/character_motion.cpp",
+      "path": "src/game/character_motion.cpp",
+      "sha256": "618a0ca0e8c9c44ff7f51e3b7103a1fc039351e2a84d6293edd253db8108c803",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/character_motion.h",
+      "path": "src/game/character_motion.h",
+      "sha256": "ccbe5707ccc6853f0805fff536b5c6b9427fe1b74b874ffa7d8f9a5be37909d2",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/chimera_behavior.cpp",
+      "path": "src/game/chimera_behavior.cpp",
+      "sha256": "02536e554e644e660e7590680231ea485d033909306f2b22b29a563404ba80b4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/chimera_behavior.h",
+      "path": "src/game/chimera_behavior.h",
+      "sha256": "1c7f5058fb3986f4d22e9936779d555241121598ea309f35976fab941c48d2d7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/clear_content.cpp",
+      "path": "src/game/clear_content.cpp",
+      "sha256": "49877431c322844f736aa186fef4593f05ffbdce5daff9f9f3367061694f0ba2",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cockpit_departure_content.cpp",
+      "path": "src/game/cockpit_departure_content.cpp",
+      "sha256": "07bacd5d8fbd487ad77e4dc2977cea6092fde311e40c3f91e991f2427b0bf5d7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_content.cpp",
+      "path": "src/game/combat_content.cpp",
+      "sha256": "d50986ce2e74eb769238de226d34be9cfc9b451b53dd1f71756f9523ac2be959",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_content.h",
+      "path": "src/game/combat_content.h",
+      "sha256": "cb4fb54990d91141fb94aeb29cf21e409a09f02a70681a12e784be87f3179b81",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_game.cpp",
+      "path": "src/game/combat_game.cpp",
+      "sha256": "561adeb24d39a18dc5fafccf6fc359cbe64a63297ec40e64d1d9729f97f1261f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_input.cpp",
+      "path": "src/game/combat_input.cpp",
+      "sha256": "923ed86babe4577f1fbf1d7bdf9e732b1bb61f616658d5a2ec6c4b69179dad23",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_input.h",
+      "path": "src/game/combat_input.h",
+      "sha256": "3b947ad31ceded68d34d0a6eb11e0e39950ee57f2df68e8e4ea2336881e57e01",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_outcome.cpp",
+      "path": "src/game/combat_outcome.cpp",
+      "sha256": "6bf4c8f767b8fde41865d7190daae1fb70adc6b011317e2a4390872bf23301f8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_presentation.cpp",
+      "path": "src/game/combat_presentation.cpp",
+      "sha256": "318830c325eb7eb49f17cd99b93524a06585d83b91e331cdf293c51be8a167aa",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_presentation.h",
+      "path": "src/game/combat_presentation.h",
+      "sha256": "3dc63068cf92ffbf6e3ea8abb1e05bd1187e585ea22c6bb8d0b1813e70eeb697",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_rules.cpp",
+      "path": "src/game/combat_rules.cpp",
+      "sha256": "da2cc3dffb1789d9100f8c192987c3af55bf2e34a52829e56e0f67ff1377d406",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_rules.h",
+      "path": "src/game/combat_rules.h",
+      "sha256": "8c1fd3a6cabe09a2cadf0e7ad1a9ce0e94645375503525d205787eb555d178fd",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_scene.cpp",
+      "path": "src/game/combat_scene.cpp",
+      "sha256": "3a8091fff212b237459e845bbd483f0c92f15cda753a4cb42e8a6fa772571a2f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/combat_scene.h",
+      "path": "src/game/combat_scene.h",
+      "sha256": "191cee7e5f440f3ab816365fdf2b95856d4dbe093c2eeea5ec8394e84406d0a4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/content_hash.cpp",
+      "path": "src/game/content_hash.cpp",
+      "sha256": "6baa610aba5da0fc79d59749a83bd54760aed344dfe3e17c68e821ae4490b4e9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/content_hash.h",
+      "path": "src/game/content_hash.h",
+      "sha256": "926ff60cdc7d4b8b6ad408a4f0f8f32b1b4ac5677cf7c1e61057efa30ea085ef",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/continue_session.cpp",
+      "path": "src/game/continue_session.cpp",
+      "sha256": "257160cdab83ad9127a8e4ff60ab18f2a7a84a010d4418bd1b32c12ff2ae8319",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/crocodile_content.cpp",
+      "path": "src/game/crocodile_content.cpp",
+      "sha256": "e92b2da780999810690b6692a5084836f38c7802898d636b29b5351c6debec1c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/crocodile_controller.cpp",
+      "path": "src/game/crocodile_controller.cpp",
+      "sha256": "ea23dc712fe9cef91f379ae3982909f71850fc6d1e4100608116a169902d583c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/crocodile_controller.h",
+      "path": "src/game/crocodile_controller.h",
+      "sha256": "3ce7aa272b011105633ef8fdb3db27f61770bb6610f23b4cdd2f990262d17cd0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/cycle_content.cpp",
+      "path": "src/game/cycle_content.cpp",
+      "sha256": "5d16a7bbb933dcf6ee1c090d4cd9441e70f92964928b6a527ff60450df0a3501",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dekisugi_controller.cpp",
+      "path": "src/game/dekisugi_controller.cpp",
+      "sha256": "7743bed2b6f866e4d92f156e55dad619988ab717290f58e015ae95f3039c0163",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dekisugi_controller.h",
+      "path": "src/game/dekisugi_controller.h",
+      "sha256": "9a5545892149cb825655c13de55c3f65ccc24efd264f67a3c52477163cbee9e0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dialogue.cpp",
+      "path": "src/game/dialogue.cpp",
+      "sha256": "ef71134ca570dac8e98c677a0536b50d1047cca4368e38939663ad962682b0d1",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dialogue.h",
+      "path": "src/game/dialogue.h",
+      "sha256": "c4cb59681787c9bc47ec19ad88e381de632b2e56c0dd4cf2ff02d5929479f567",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dialogue_renderer.cpp",
+      "path": "src/game/dialogue_renderer.cpp",
+      "sha256": "4c1c8541f0eff69bb97c63815ac86c9fbafc565b23491aa7788ca7e8ec820f3e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dialogue_renderer.h",
+      "path": "src/game/dialogue_renderer.h",
+      "sha256": "30278a3012735542e2626392fe95fa47385b78064e2b49352abb69b4cf52bd56",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/difficulty_content.cpp",
+      "path": "src/game/difficulty_content.cpp",
+      "sha256": "b521689907c1342a3ae88186580fec515e01d04a7aff976cca0756fbf2956c01",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dora_content.cpp",
+      "path": "src/game/dora_content.cpp",
+      "sha256": "d97d9c9b35b64ed2c6244695ed6b6e476e0062ae640b7382ec3f29a5da69ac77",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dora_controller.cpp",
+      "path": "src/game/dora_controller.cpp",
+      "sha256": "5125680ad51704a6f87af658cb2e6d926912c966389bfc5b5059b1e1293bf6d6",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/dora_controller.h",
+      "path": "src/game/dora_controller.h",
+      "sha256": "fe788f6285c917888209add9b449a2d1a855861d014025b8bb14600feebc354e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/drainage_content.cpp",
+      "path": "src/game/drainage_content.cpp",
+      "sha256": "7578beda9e21fc5d7db03c7f6af9445aa7e69a76cb7f196bdb4794a0acf18685",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/drainage_panel.cpp",
+      "path": "src/game/drainage_panel.cpp",
+      "sha256": "74724fea7c5ae6a0569a79b9445623aa8f21fe1167a1d991df743398c442b596",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/end_midi_music.h",
+      "path": "src/game/end_midi_music.h",
+      "sha256": "c95c6f4ae210f7d1dd3dd9cd90eca216ae1dceb3cc4b3998760004ecc74fa181",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/ending_score.cpp",
+      "path": "src/game/ending_score.cpp",
+      "sha256": "0f62374c29108aca48cf050188e56eafbce2bc67654c446c4d3a19c21796cdaa",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/ending_score.h",
+      "path": "src/game/ending_score.h",
+      "sha256": "ed603f3816434c20b6fba2a04ebbe1638f0e1ba773fc7db02fb0847583842544",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/enemy_controller.cpp",
+      "path": "src/game/enemy_controller.cpp",
+      "sha256": "f985185f2936205afffbccccea800473dbc58cdb869881a8aa1263d579e0484d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/enemy_controller.h",
+      "path": "src/game/enemy_controller.h",
+      "sha256": "4ac4d43ce874aee9f58070fecd882d66db81c7d9e04b0b1c9a9750597467f784",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/enemy_host.cpp",
+      "path": "src/game/enemy_host.cpp",
+      "sha256": "237114fc27172840ef43cb51a32c8b9021cd4645d1f5892538041c35fba31487",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/enemy_host.h",
+      "path": "src/game/enemy_host.h",
+      "sha256": "ac4650af18eed64867833d92b27ed04b0b94312014c4c18729c38197cac8d339",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/environment_targets.cpp",
+      "path": "src/game/environment_targets.cpp",
+      "sha256": "19e6ce677206b1d9928757cffa583aea61c5b9665ada2384146aeb17ffae75c1",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/epilogue_content.cpp",
+      "path": "src/game/epilogue_content.cpp",
+      "sha256": "8fb1c52c8104f36334eae318e19336990a30be103c8613481f1fa5a6859ef283",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/escort_content.cpp",
+      "path": "src/game/escort_content.cpp",
+      "sha256": "a765690851dae82f80731e9a5b0ce8f5294010de0c807ee01682ae04afb679df",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/escort_controller.cpp",
+      "path": "src/game/escort_controller.cpp",
+      "sha256": "efccbe4a286e98d8e4642c42f66c6e6866d06516a94892ed99b2f1af463d4f90",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/escort_controller.h",
+      "path": "src/game/escort_controller.h",
+      "sha256": "6b70a33519b0e1ce0ad324c6ab0f8224e09aa45d0ab7fd8bde81a4420065f390",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/exfont_content.cpp",
+      "path": "src/game/exfont_content.cpp",
+      "sha256": "fc93f96c27f4432b62dabca7c0abbebacbc2d18212065df2f7ba43a04267e218",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/expanded_content.h",
+      "path": "src/game/expanded_content.h",
+      "sha256": "f1d2b7a763b956de671bbd13fb527ac7c3f72adbe60b762d890cfe5c2b098ff4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/expanded_content_validation.cpp",
+      "path": "src/game/expanded_content_validation.cpp",
+      "sha256": "daf5a33bf4df273fadfa68ad2cb22593709f0b8c95275b54009b6d54e025a5c7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/expanded_content_validation.h",
+      "path": "src/game/expanded_content_validation.h",
+      "sha256": "742f6b205eb2f44e06e65bc9a94296b3f0bc32620bfdba039612afda367758fb",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/exploration_flows.cpp",
+      "path": "src/game/exploration_flows.cpp",
+      "sha256": "1296ff70d38db0d05c6fc014e0ff0014229593456dfe670c8a5d2f5b574308e7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/exploration_scene.cpp",
+      "path": "src/game/exploration_scene.cpp",
+      "sha256": "d384f7695389305b948e37ed9c7eb53e69e8aa27a80ff732900314aef39dd1e8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/exploration_scene.h",
+      "path": "src/game/exploration_scene.h",
+      "sha256": "f38d41dfcabcaf11071636593141fb7a01b26e3b1f1c5e2f08c595b2615dfe62",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/file_menu.cpp",
+      "path": "src/game/file_menu.cpp",
+      "sha256": "a93cb29cc2d8ec272e8ea5f2e171e762dbdefad3bb273e3def57e29e481a85b4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/file_menu.h",
+      "path": "src/game/file_menu.h",
+      "sha256": "46e78f9064ec588dffe4c4c5953a3f7a4262833eb7162419b16f49cdc31f7825",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/final_boss_content.cpp",
+      "path": "src/game/final_boss_content.cpp",
+      "sha256": "e77619306f9c6cc35fc192185f838c9aca556b79533433c84026161d76af784a",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/final_boss_controller.cpp",
+      "path": "src/game/final_boss_controller.cpp",
+      "sha256": "cf4be959bd00b99d03a9507cbbaf09939ea73d67072ccc8b707caaf4b3dd9d46",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/final_boss_controller.h",
+      "path": "src/game/final_boss_controller.h",
+      "sha256": "2d2121f9ccb15ee0bce0ab04e3014ca994a7d257a735488d27395d292899c99e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/full_content.cpp",
+      "path": "src/game/full_content.cpp",
+      "sha256": "0b8da5447389bd7015f3586ed88d841e29af765ff8981787c9aaf95eaaa8b63f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/full_content.h",
+      "path": "src/game/full_content.h",
+      "sha256": "62d0861aab126b991e2b48032d07a6ed439334b0dacae51b851ff6c8ae920fae",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g0_content.cpp",
+      "path": "src/game/g0_content.cpp",
+      "sha256": "5c6619416436df52213524d72b3a2fa5d96aeefbf57f3d66cff961cc04261ff7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g1_content.cpp",
+      "path": "src/game/g1_content.cpp",
+      "sha256": "a3e192d8d8230768a8da47f63629b6c0df6f1bbf527a1412866e7268c72c0c31",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g4_truth_content.cpp",
+      "path": "src/game/g4_truth_content.cpp",
+      "sha256": "4f352d4ef9629316c78c90687b0383a101dad036b23dc0b1850dfbad678f57ac",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g5_aftermath_content.cpp",
+      "path": "src/game/g5_aftermath_content.cpp",
+      "sha256": "8a2fb0b74aba3a216b5a9a61b1a633a8a353eeab279e0a56426eaef5b424f530",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g5_control_content.cpp",
+      "path": "src/game/g5_control_content.cpp",
+      "sha256": "74278fe23667e30dd38fedec08cb8918508a861bbd6d058677cb56638a8d423e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/g6_return_content.cpp",
+      "path": "src/game/g6_return_content.cpp",
+      "sha256": "c977dd131fd2746dd4e21ffd9299185b5bfb6e1cbdb2fe9f2edcc896d2aaa281",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game.cpp",
+      "path": "src/game/game.cpp",
+      "sha256": "881a94444c0a71831449dedfd8700d03500e1659e126934821dfae5214f781a4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game.h",
+      "path": "src/game/game.h",
+      "sha256": "806681250e2724cd9a8912afb391b90c546b85cf4593cd20d065e43b4c22240a",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game_application.cpp",
+      "path": "src/game/game_application.cpp",
+      "sha256": "88ec8e3e4ff600bd6ab9386ee985c9ccf0187c21532707f5c0b6e5212f22d5e4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game_application.h",
+      "path": "src/game/game_application.h",
+      "sha256": "d1b9fa2c657887734238b5c6b1c6e33dac2b370fd0d8259a6e93fc19a368f114",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game_session.cpp",
+      "path": "src/game/game_session.cpp",
+      "sha256": "b075301552637e14ddb1dc740ca25a4df3c34774d9c7c1decfebd3d0ad6d1074",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/game_session.h",
+      "path": "src/game/game_session.h",
+      "sha256": "2711e71010d94de6d99b0d3f5368b97bb894961dc1d038c5a2b410b88d655bfb",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/guard_content.cpp",
+      "path": "src/game/guard_content.cpp",
+      "sha256": "548133f01d2334acd2f049b742b177eac2feaf2f8e7d943e75a162e00854574d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/guard_controller.cpp",
+      "path": "src/game/guard_controller.cpp",
+      "sha256": "c3356cd3a2fd148cbac085a5d6eb020fd382856b14dea755684bd98c68df981c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/guard_controller.h",
+      "path": "src/game/guard_controller.h",
+      "sha256": "75e361521b7bf2420d14a1684e868f5ea6af3d3cedf86cda97679a30a827fce4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hangar_behavior.cpp",
+      "path": "src/game/hangar_behavior.cpp",
+      "sha256": "873c571118ccb141306cbbf289cd7336da9957bfd8eeb431646a800198e0d4dc",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hangar_behavior.h",
+      "path": "src/game/hangar_behavior.h",
+      "sha256": "9be9cbf6a459888f03842b130ed6c3d0c55f1ad3c539fe9569d06e9f3c455373",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hangar_gas_rules.cpp",
+      "path": "src/game/hangar_gas_rules.cpp",
+      "sha256": "dafd11f5a805705cd143dff34c5f9a88201e5b70db7a3f080e046f5df9488912",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hangar_gas_rules.h",
+      "path": "src/game/hangar_gas_rules.h",
+      "sha256": "fa6c2c25be08adaf4297134424b16f24b78fc967e13b54ce7351f836e3dd688c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hunter_behavior.cpp",
+      "path": "src/game/hunter_behavior.cpp",
+      "sha256": "456c7fafed6d5a6152387efddaa28b57d87ceb32dbbabb4c9122b7e7d6bd661c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/hunter_behavior.h",
+      "path": "src/game/hunter_behavior.h",
+      "sha256": "bafb38d41be44de484c2326ca0a86b461c90c718bc19841da774b64c918bbf45",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/input_buffer.cpp",
+      "path": "src/game/input_buffer.cpp",
+      "sha256": "fe553ce6aa9e0c5bfb24167579f69dbcfac5e4c7aac9174979e22c9b2c8e7fa9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/input_buffer.h",
+      "path": "src/game/input_buffer.h",
+      "sha256": "3b629bcea8398c1067fbfc75a977001c2a5bc691865d2ec257a42dd7ea2970ad",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/input_prompt.cpp",
+      "path": "src/game/input_prompt.cpp",
+      "sha256": "5f716d855ba3a7ad960928f97ea07d57d81cc4e4740365a88d82ed7331f38d1f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/input_prompt.h",
+      "path": "src/game/input_prompt.h",
+      "sha256": "7d7cbf167255e34f85be09fd3f9bb4038bd0555de594befcd1713af539d4f773",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/item_definition.h",
+      "path": "src/game/item_definition.h",
+      "sha256": "82d5b5b9e964c5777cab5d353175035ce36ba9c3ea7c2208bb9574eaefe95062",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/licker_behavior.cpp",
+      "path": "src/game/licker_behavior.cpp",
+      "sha256": "92f86f44bd3d05e51803cb8778a8ff5c411c0d420999bb6d1b2c2a36b8460baa",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/licker_behavior.h",
+      "path": "src/game/licker_behavior.h",
+      "sha256": "104edd14933782066555d1528de2e46c9c53a4ae89cd1f557a9ac49bec805c19",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/main.cpp",
+      "path": "src/game/main.cpp",
+      "sha256": "8a635cc0f17ba7e5db3c7f4533030d1a36ec5be90f03206acc0f45fd92da77f2",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/meeting_controller.cpp",
+      "path": "src/game/meeting_controller.cpp",
+      "sha256": "b38e5611a14b2ed8e7e418153ff34402e54ac5e995697ffc3ccc499918509621",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/meeting_controller.h",
+      "path": "src/game/meeting_controller.h",
+      "sha256": "c3c421d292245df50d60f136066c9803606d251e77330bc48ebd3cb926a6b0a9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/menu_controller.cpp",
+      "path": "src/game/menu_controller.cpp",
+      "sha256": "b4a85525646872eb007d3c5be87dfbe3905fb34e8795a6e38a42b5b397096751",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/menu_controller.h",
+      "path": "src/game/menu_controller.h",
+      "sha256": "54759fd266e69ddba8227679c98d6da949bb7eb5fe96a25a9622148484c82463",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/menu_presentation.cpp",
+      "path": "src/game/menu_presentation.cpp",
+      "sha256": "fb60af98b7ef4706798c2d9584e691d2f6316e10efdb684a26e0a7db553c6fff",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/mixing_flow.cpp",
+      "path": "src/game/mixing_flow.cpp",
+      "sha256": "c218e426eb03d2b8ec3d88d8f4bb301c73a56e4fb5b40ad7fb83e085c30c426f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/opening_controller.cpp",
+      "path": "src/game/opening_controller.cpp",
+      "sha256": "cbeb365a130bfea2c785223b8ae73ce6c8ea6208917c460864a068162b83488f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/opening_controller.h",
+      "path": "src/game/opening_controller.h",
+      "sha256": "37f7ff8ffeae086cd92a1d7fd8f89926fa7b7ebbef37d1c8e255348cc54b6315",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/original_window_skin.h",
+      "path": "src/game/original_window_skin.h",
+      "sha256": "c8a5b819357fa984addebc17f679071f4869165421856102a2f7a70c65075382",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/parking_content.cpp",
+      "path": "src/game/parking_content.cpp",
+      "sha256": "bfde9e7e1288040ea1e11f95e0e5e5d1a386dd0cd1d0d046c9b3506e4dc92e56",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/pcm_loop.h",
+      "path": "src/game/pcm_loop.h",
+      "sha256": "4320b5292da451f8b53f243a5553e0dd49228bc6b1f2503c2d44c512b36aafcd",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/picture_tone.h",
+      "path": "src/game/picture_tone.h",
+      "sha256": "96131d4b2bc206ac008ed136cc0bb4f85c517002453b95735237fbd880505f7e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/predecoded_music.h",
+      "path": "src/game/predecoded_music.h",
+      "sha256": "1480b03e268a912df21aafbde335d131f4cfc669027d8b4b68d65f3c825f1f03",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/presentation_event.h",
+      "path": "src/game/presentation_event.h",
+      "sha256": "18405b9cb1d40b9cdcbd650376ac90c2bd750f9ae9f5ccdf14b04c078313337e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/projectile_policy.cpp",
+      "path": "src/game/projectile_policy.cpp",
+      "sha256": "5c1119e468ad86f725ec4258ad577a01e1f787514334e901ff3032626bdb0d27",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/projectile_policy.h",
+      "path": "src/game/projectile_policy.h",
+      "sha256": "e8f283f9eac87f5d4df361677332f90ff2e43376e37089640a19f9c56e5d9c03",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/pursuer_behavior.cpp",
+      "path": "src/game/pursuer_behavior.cpp",
+      "sha256": "1b40d0b1abee064d397a4c312e85a1491e7f969594ecb93221f948f8749e166b",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/pursuer_behavior.h",
+      "path": "src/game/pursuer_behavior.h",
+      "sha256": "0d218e1e04731c656832264aa000711536b49d0bb61d4b3d5c9d565737de44c7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/reading_controller.cpp",
+      "path": "src/game/reading_controller.cpp",
+      "sha256": "7504bda6408271cd747a398f7f8c9947f2e492e04792c81e44b0f1f724796d8a",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/reading_controller.h",
+      "path": "src/game/reading_controller.h",
+      "sha256": "3b107f56b41e6af991a79c98aacf11a11a784142b35d98bf8c0e059acfc8e6b7",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/registration_keyboard.cpp",
+      "path": "src/game/registration_keyboard.cpp",
+      "sha256": "5c3a7c1d778e1de559ee3f5a9e9666e76df34bdf0999c879b5b4f72a9e3566e4",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/route_player.cpp",
+      "path": "src/game/route_player.cpp",
+      "sha256": "f01c9f40d77cca5d2038c16ddbb18c6bf21daa862d09cbcc536c3ef77519d239",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/route_player.h",
+      "path": "src/game/route_player.h",
+      "sha256": "04fd40eb9556e626e36675a6d03698fc0ddd0cb5726090919379f3e4579d2f43",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_controller.cpp",
+      "path": "src/game/save_controller.cpp",
+      "sha256": "58da6af626a8433dbaea19d07d6504f2ce6228dc36037d850651889b235c3fd9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_controller.h",
+      "path": "src/game/save_controller.h",
+      "sha256": "92869426ad38887aeea515fd495e8bd1cb3acddc0b66095b601216bbe52581c8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_files.cpp",
+      "path": "src/game/save_files.cpp",
+      "sha256": "bfe97cc3aaab7c876c93c830525de6ad6d2916e920a0c6e3d5c6077a4de21dff",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_files.h",
+      "path": "src/game/save_files.h",
+      "sha256": "610652b9ce5e95fc86d5622c8382ae075d267308d80fa22be0d285b3d3d654c8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_platform.h",
+      "path": "src/game/save_platform.h",
+      "sha256": "34e320edf000594d6effe20389767c2661c17e8acd2b2e321b95dca84392b86b",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_platform_mac.mm",
+      "path": "src/game/save_platform_mac.mm",
+      "sha256": "8efb8bf0c009ee0ba28a4a33254d32d85e9beb4d8b8ed8e402f2dcdce4f2611c",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_platform_windows.cpp",
+      "path": "src/game/save_platform_windows.cpp",
+      "sha256": "c62452f2894deb952b07815718f8fcfbf4ef859637440dc672aa86ad7a1126b8",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_snapshot.cpp",
+      "path": "src/game/save_snapshot.cpp",
+      "sha256": "bf2d2ad9cfc80ee731fd60abf86c34388501e0305b359e5941f3263ccd31d78e",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/save_snapshot.h",
+      "path": "src/game/save_snapshot.h",
+      "sha256": "4f75ae31c5a92e87a7bd659a0343d255c6ab0c24e20517744ba1cc8c9aa03d8d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_camera.cpp",
+      "path": "src/game/scene_camera.cpp",
+      "sha256": "42f80f1520a15c7555f01e4fc2513e17eb2c022da84bc25f8c88c2328a88d468",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_camera.h",
+      "path": "src/game/scene_camera.h",
+      "sha256": "3644e494ab2f4eaac94d3b1d9bd0fc34a8c39d4df680e5b6a1c9bf990d7e2440",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_definition.cpp",
+      "path": "src/game/scene_definition.cpp",
+      "sha256": "949fc49c22cd85208ef3cff641a5f09ee098e546b7744284499d8a29fe9a47a0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_definition.h",
+      "path": "src/game/scene_definition.h",
+      "sha256": "67f0be469640b7021673815934fa2faa7c79ed5dcf61587501656f93f31365b6",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_presentation.cpp",
+      "path": "src/game/scene_presentation.cpp",
+      "sha256": "ea08f05ccb855291bc2a6f20dd20f192b2807de8edb655ed08bcec8bbb743289",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_presentation.h",
+      "path": "src/game/scene_presentation.h",
+      "sha256": "7c2a70735c0029871828089e40103363dc98843780cbd05961646425903601a0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_renderer.cpp",
+      "path": "src/game/scene_renderer.cpp",
+      "sha256": "4c7fff8ee21ab67d1233798f8ffcedffd4b717684fb855dca09ae85a5ea6ed20",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/scene_renderer.h",
+      "path": "src/game/scene_renderer.h",
+      "sha256": "1291188af3470d57e58767b0d10a4bb49e496480209106a4a888dc6c312cef64",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/score_content.cpp",
+      "path": "src/game/score_content.cpp",
+      "sha256": "9a83a8a0364b5aa1e095db56b70c9f071ba2c1a5fcd535a66e8ff67152083873",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/simulation_clock.cpp",
+      "path": "src/game/simulation_clock.cpp",
+      "sha256": "ef4c18af918756b1edc8ad58731ce50a2c8f115c3146d1e38d950ea6e024840d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/simulation_clock.h",
+      "path": "src/game/simulation_clock.h",
+      "sha256": "15d6702ad801a7275f2529e118814863cd308e51bd6dddd89e4931eeff81857d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/special_equipment_content.cpp",
+      "path": "src/game/special_equipment_content.cpp",
+      "sha256": "50f19b86be31ae934a1aa6f1950df9238f9e8050436c955ea630b04d6867b2f9",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/spider_behavior.cpp",
+      "path": "src/game/spider_behavior.cpp",
+      "sha256": "3f6d747da450e79cf8cb29efa570a06aad796d08c05314d0150f380ea3bdd37f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/spider_behavior.h",
+      "path": "src/game/spider_behavior.h",
+      "sha256": "320454d2490675f1cda49c09d00015b4a12a88cb6c3b17eb3be9532eb8e46cac",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/text_cell.h",
+      "path": "src/game/text_cell.h",
+      "sha256": "16a27e99ef35fc8798ef2c52a099e81d96056fcb216c69a0788d17ce2c3bcdca",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/tool_flow.cpp",
+      "path": "src/game/tool_flow.cpp",
+      "sha256": "7a1b4565faa3f3e8ac8161606daeb18124a7e9e8df429e3b4799ac381437f134",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/tool_request.h",
+      "path": "src/game/tool_request.h",
+      "sha256": "6142a624650cbfed9fa7bbdc64698635220de1118f16edada085210f0f446990",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/tower_content.cpp",
+      "path": "src/game/tower_content.cpp",
+      "sha256": "a3040f7b90414b16c1ea4263dcbdf561f95806a9e9a31d330eff61fca71b1f53",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/truth_content.cpp",
+      "path": "src/game/truth_content.cpp",
+      "sha256": "5033aee07ad8d428dcadfa4e4fb5cad5aa439163074fc69ac7c0fcf7c1f61b55",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/underground_content.cpp",
+      "path": "src/game/underground_content.cpp",
+      "sha256": "4a43d528d1d8b0f112457b8a35a9849ce33a8a519c02fbd9b06beb33bfa04170",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/warehouse_g4_controller.cpp",
+      "path": "src/game/warehouse_g4_controller.cpp",
+      "sha256": "ed9dbb8daf68aa7b82a7172bc5c599ba1ad46f0e1836d13df1bea882fca6312f",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/warehouse_g4_controller.h",
+      "path": "src/game/warehouse_g4_controller.h",
+      "sha256": "6f8a64a76b2227bee9e9821fead614eb1cc394933fb9899fe7f9b2df9d0d7114",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/warehouse_save_state.cpp",
+      "path": "src/game/warehouse_save_state.cpp",
+      "sha256": "ca83f85785c229eea222ad2df42108223ceb84e4b1c0655e501b62957a97ef29",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/warehouse_save_state.h",
+      "path": "src/game/warehouse_save_state.h",
+      "sha256": "e1ad4cfb35b546547ee3edde17473468086efeae26ad7d8167f9458f89f8272d",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/warehouse_visual.inc",
+      "path": "src/game/warehouse_visual.inc",
+      "sha256": "a0f8b22cec80399f9db026d8d2609e7edffd90014e47984a50949a75e4759296",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/weapon_controller.cpp",
+      "path": "src/game/weapon_controller.cpp",
+      "sha256": "db949a662d39a8981d790449a16c0e16a148e1b64eaf28f3f1bd3c627f937502",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/weapon_controller.h",
+      "path": "src/game/weapon_controller.h",
+      "sha256": "947ad0456b2d556e8afdc923f7678140ed09dae8ca4946e2e37a262f4790c618",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/world_geometry.cpp",
+      "path": "src/game/world_geometry.cpp",
+      "sha256": "90349ea3ffed8581f37d3a9ae194d1e6270d794b1f1fc7564b54d75874aff0cd",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/world_geometry.h",
+      "path": "src/game/world_geometry.h",
+      "sha256": "6df86b59ced89b4b77f7e7d68fc182f43a33a423113022a33fc284055eb002d0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/zombie_behavior.cpp",
+      "path": "src/game/zombie_behavior.cpp",
+      "sha256": "04f6adb1a809c78403ae6e70dfd7de1e6dc4baebf04981f3214d72b67ad00cb0",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/game/zombie_behavior.h",
+      "path": "src/game/zombie_behavior.h",
+      "sha256": "75781a42119e24a5b57542fd70faf67419406ff7d0a456d3c4a39b5fc9861a3b",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "src/main.cpp",
+      "path": "src/main.cpp",
+      "sha256": "f310f17565568d4a6ecb0532c8f1b127e89545479788fa0d6dcb7475e01c5b26",
+      "basis": "handwritten implementation; content/literal/include screening; no original event array or narrative payload"
+    },
+    {
+      "source": "tests/animation_dialogue_checks.cpp",
+      "path": "tests/animation_dialogue_checks.cpp",
+      "sha256": "8ad76d61ce600a7da2c222d4ff20be2e866cb69f2bb4e44905b087391f51d354",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/application_checks.cpp",
+      "path": "tests/application_checks.cpp",
+      "sha256": "66ab9b4b4c9c57664b8a77c0b6b6aef418a91300fc4be94b70556f9a3e6d7587",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/combat_content_checks.cpp",
+      "path": "tests/combat_content_checks.cpp",
+      "sha256": "5c9c4083ed7505cea087d0d6451661f79a94a9faea3bbde165e5c8e8de5c7512",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/combat_edge_checks.cpp",
+      "path": "tests/combat_edge_checks.cpp",
+      "sha256": "28b95023fe4fb86c345fcef81bbb104d2854901a5757c1d2a93c76069bd02bbe",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/combat_input_checks.cpp",
+      "path": "tests/combat_input_checks.cpp",
+      "sha256": "49d260b660835e10dec0c97191c3ef9e372bf24bc5dfeadbb9ba9e0734847308",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/combat_integration_checks.cpp",
+      "path": "tests/combat_integration_checks.cpp",
+      "sha256": "bdc024fa39caef5b8538389d850edaae231131a85b7e87478600d0b9f7cfc369",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/combat_presentation_checks.cpp",
+      "path": "tests/combat_presentation_checks.cpp",
+      "sha256": "535ae9f94eaa1eed4ea8c5ca446c192ab07f2bdaf1fec77c7ebf6d9b4a8eeb48",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/conference_checks.cpp",
+      "path": "tests/conference_checks.cpp",
+      "sha256": "cae99d657fd0e5965bc8b9758522d2dc0bce813ba7428a53f3c7284a7c9f3f01",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/conference_window.cpp",
+      "path": "tests/conference_window.cpp",
+      "sha256": "a74b177cfab823a1b73b002d641329551c6d41f705bf7da511088c6b08536699",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/content_bytes_checks.cpp",
+      "path": "tests/content_bytes_checks.cpp",
+      "sha256": "3510fe7d4041ed07579129bb3727cf0b02942328e9ae8793149437bb3ec20554",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/content_directory_checks.cpp",
+      "path": "tests/content_directory_checks.cpp",
+      "sha256": "07e8c8414e9dba49ba2ce11dcd2ad4eccefb0ddbad2870c5010eae1dd1675a38",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/continue_skin_checks.cpp",
+      "path": "tests/continue_skin_checks.cpp",
+      "sha256": "b029766c0e760f5124ffe758332bbadb4ee6e5e8a4d885df7b45429dd769e19a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/damage_checks.cpp",
+      "path": "tests/damage_checks.cpp",
+      "sha256": "788c82118f8fae4d7f7e5390a433f3181b1d938c2f84106522369c0188bc7b35",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/de_weapon_checks.cpp",
+      "path": "tests/de_weapon_checks.cpp",
+      "sha256": "cf63488c8c546703ea78610361d98ac9a7a75c2da5fa385cfaa6bf3945340ef8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/de_weapon_window.cpp",
+      "path": "tests/de_weapon_window.cpp",
+      "sha256": "c3afa2f0a436b2be89620fea7e062b4b63d60bd393da56fcf759a4717f24c42d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/escort_picture_checks.cpp",
+      "path": "tests/escort_picture_checks.cpp",
+      "sha256": "1768550d0a82074333dcc21f112d672cd99c76431f8f095abf583ddd3520c9c8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_batch_b_checks.cpp",
+      "path": "tests/f3_batch_b_checks.cpp",
+      "sha256": "274dee373eff0c294093d59405b553f2f41baea457b14263ed44f51bf2a5b282",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_batch_c_checks.cpp",
+      "path": "tests/f3_batch_c_checks.cpp",
+      "sha256": "5414f7fcc7653603e50ea08b6d1c04f516e9dcf2ab5f30fa0ebd5d796b1667e4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_enemy_window.cpp",
+      "path": "tests/f3_enemy_window.cpp",
+      "sha256": "d9448f072cab78ae1d34f717b13b1f9736314903fb5d467a02eee53309c22c61",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_exploration_checks.cpp",
+      "path": "tests/f3_exploration_checks.cpp",
+      "sha256": "194ec0f96dbd5cad5663c408c25e02671c37516579e0e2c514275adf4ef5d933",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_exploration_window.cpp",
+      "path": "tests/f3_exploration_window.cpp",
+      "sha256": "c480193e206c26333f23a0f6c3c8f28b71d542765fc2df0bee54a9a261c0c1ef",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_presentation_checks.cpp",
+      "path": "tests/f3_presentation_checks.cpp",
+      "sha256": "9778249c03b9822e8414f506f7d6d0b9deb0fcc10c94fa81fe944bdb7e5af598",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_return_checks.cpp",
+      "path": "tests/f3_return_checks.cpp",
+      "sha256": "13deb1730862d1f19dec67d2475fa9a8d3fc9c5ac38ed5067c339c17943c0ae8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_route_checks.cpp",
+      "path": "tests/f3_route_checks.cpp",
+      "sha256": "ea8c28a5c9812207bf1358fa86fca91b5f004575318f6f9f05de5526e0e4655b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_transfer_checks.cpp",
+      "path": "tests/f3_transfer_checks.cpp",
+      "sha256": "92605ed68caf33282657104df1392464ff6ec9a293577758e249bb0794be8e82",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_transfer_window.cpp",
+      "path": "tests/f3_transfer_window.cpp",
+      "sha256": "68fbcced6fdb430ddc19e17cf7ddf911b59d3f18d64139d6db76bbe8c9ef59d2",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_weapon_checks.cpp",
+      "path": "tests/f3_weapon_checks.cpp",
+      "sha256": "87af8157d3e7f32f3bdf5fa69b3f8606ffa419851798b7314f55dfd3f46fc066",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f3_weapon_window.cpp",
+      "path": "tests/f3_weapon_window.cpp",
+      "sha256": "6e00af831a54aa75a0d6473e0f87d2f91a0dbdc43615d178fbdd7fb88dfb85bb",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_batch_b_checks.cpp",
+      "path": "tests/f4_batch_b_checks.cpp",
+      "sha256": "8373ef4b1adf18b5b359a58d127eac67cae62f05db2ab4f133fe9937960e72d6",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_batch_c_checks.cpp",
+      "path": "tests/f4_batch_c_checks.cpp",
+      "sha256": "1de8f2efc49ef9e4699aa4cb8a709f81d95362130f64ba6c10bb6af6d6f12995",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_content_checks.cpp",
+      "path": "tests/f4_content_checks.cpp",
+      "sha256": "296bd95fd6821ed777c10eb11811bc89f98ff96560cebf46314e7122124cb710",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_integration_checks.cpp",
+      "path": "tests/f4_integration_checks.cpp",
+      "sha256": "d59be493a68e6df82380e57103fb5397ece3c5aabfb00594be6c8c2bc4f2e4fe",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_integration_process.py",
+      "path": "tests/f4_integration_process.py",
+      "sha256": "e93166903171408c4258a8c9f4ae6911a4c44148d1aebb6531f25203a8eeb34c",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/f4_legacy_checks.cpp",
+      "path": "tests/f4_legacy_checks.cpp",
+      "sha256": "883d9aaf40e40fc8472fce06ce031e3b2dd6027c1daa1335adbb0959b7c097e4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_legacy_process.py",
+      "path": "tests/f4_legacy_process.py",
+      "sha256": "6bc3aa9e678f655d02cce750ff912570d19a636db4af1a0cbba467d0c7dd4866",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/f4_navigation_checks.cpp",
+      "path": "tests/f4_navigation_checks.cpp",
+      "sha256": "05710c147ec133a29b53d2a5abf271bc6e1eaab02992316192cb09bad5ec34da",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_package_checks.cpp",
+      "path": "tests/f4_package_checks.cpp",
+      "sha256": "e8d2b82271ceb3e334a5eab7a7aebee8419549eab5270c749cb83b775275ac77",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_playtest_enemy_checks.cpp",
+      "path": "tests/f4_playtest_enemy_checks.cpp",
+      "sha256": "f2d5beb365ccaedc07120cf89165ce68f7632851f816d92534deb37de7bc6c4c",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_playtest_save_checks.cpp",
+      "path": "tests/f4_playtest_save_checks.cpp",
+      "sha256": "16ad075425be346af496492c15d499eb2bf3bc2ab5b649bbecc3021771a6b273",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_route_checks.cpp",
+      "path": "tests/f4_route_checks.cpp",
+      "sha256": "8314dbcfc47577dca14f3478dc43822ced1551ce5be3985db0df7dd3c69228c3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_route_window.cpp",
+      "path": "tests/f4_route_window.cpp",
+      "sha256": "d4a5d5e0f8428213295e445ef84b787f2e30cb0c6a7644060c842dc550be49b1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_save_checks.cpp",
+      "path": "tests/f4_save_checks.cpp",
+      "sha256": "665be1acc947c64888e9414062ab737704284b911049bdebb39909e9124e71be",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_save_process.py",
+      "path": "tests/f4_save_process.py",
+      "sha256": "4b01c4f7fc429dfe380c562320d31b89e4e280ffb93ceb24af952d5db12626db",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/f4_save_window.cpp",
+      "path": "tests/f4_save_window.cpp",
+      "sha256": "56e842de0e75be5bcb808402d3f0ccac74d4a22bbfc601f112886000b87871cb",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_story_checks.cpp",
+      "path": "tests/f4_story_checks.cpp",
+      "sha256": "7e68a16e38c727531ce9f5f63625277b6a1d45fae620c1703e92709e50129d10",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4_zombie_checks.cpp",
+      "path": "tests/f4_zombie_checks.cpp",
+      "sha256": "9afda3cf0adbd85fab97a8102b38fb910c7e53dd2672515bf86df52de0d0c754",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_ammo_checks.cpp",
+      "path": "tests/f4bc_ammo_checks.cpp",
+      "sha256": "e7548d638313a5d8f0c7274fae3349d9162a8b74de21ff6f7febc7a3b3c1b1d7",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_animation_checks.cpp",
+      "path": "tests/f4bc_animation_checks.cpp",
+      "sha256": "89dd94f1217757ef3921e6af486b90826ab16cb450f0771e527018e1a6d31106",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_aux_window.cpp",
+      "path": "tests/f4bc_aux_window.cpp",
+      "sha256": "61092e64e89ba8e1ed466425c0799808dc146a7f35a09869d100ccaab6373951",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_blood_checks.cpp",
+      "path": "tests/f4bc_blood_checks.cpp",
+      "sha256": "9fbd86a7301a8c2b45755cb19b757487992828757328078da124dbabc2f36781",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_blue_eye_checks.cpp",
+      "path": "tests/f4bc_blue_eye_checks.cpp",
+      "sha256": "961ce93f37b8335547f9ebb632def23013264d0ec68d353fb7ea716845098ed5",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_content_checks.cpp",
+      "path": "tests/f4bc_content_checks.cpp",
+      "sha256": "a0a3d328a821742ee62bef69c28ef640010f27817fded1ae6c151b29de8e959a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_dog_checks.cpp",
+      "path": "tests/f4bc_dog_checks.cpp",
+      "sha256": "da4562d23c8a1c6863388b53130c8e0fbad00dacdd4ef875db2b6ce362c671c0",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_enemy_checks.cpp",
+      "path": "tests/f4bc_enemy_checks.cpp",
+      "sha256": "6cf9bf103c4b6623f30410df0f4cb6a09c9e640141d9ee835cf10aaf3017f99b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_exploration_checks.cpp",
+      "path": "tests/f4bc_exploration_checks.cpp",
+      "sha256": "c56d8588f5404ef5baf01600539d0cdc31decb122625a483e3eba902c877e0de",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_firearm_checks.cpp",
+      "path": "tests/f4bc_firearm_checks.cpp",
+      "sha256": "31bfecc8b46edf67fb94f41f6bba3c7d557bf0f6e0259d493bb0a1f4e7118a70",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_grenade_checks.cpp",
+      "path": "tests/f4bc_grenade_checks.cpp",
+      "sha256": "94a0a03fbafc41f40714103f301ed4d5e60f0cb14eed2f019f9292d94220b161",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_integration_checks.cpp",
+      "path": "tests/f4bc_integration_checks.cpp",
+      "sha256": "95bd73c158c14749c0775bed5f77f966597050ea1624cc2cf231f6d10005a05d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_journey_checks.cpp",
+      "path": "tests/f4bc_journey_checks.cpp",
+      "sha256": "a5bad566315a40e5bfd7827f42a170c9a22a099d6d382735f8870ee994fd8500",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_lighter_checks.cpp",
+      "path": "tests/f4bc_lighter_checks.cpp",
+      "sha256": "f73804ed71282b8d115f2dd922903d5ff78ebdf168d9630d85c31cff4a71f0b2",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_navigation_checks.cpp",
+      "path": "tests/f4bc_navigation_checks.cpp",
+      "sha256": "b390c459ae38445307c7f059009a84a3590bcab80b87320507282fda76b18f0d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_power_checks.cpp",
+      "path": "tests/f4bc_power_checks.cpp",
+      "sha256": "1a097a87bde7f3af7de8883e4fdef9ac0f3c247a183b6aaf012892da16717135",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_puzzle_checks.cpp",
+      "path": "tests/f4bc_puzzle_checks.cpp",
+      "sha256": "ceac79b7d6156e3130f8154d30c80f4a5f7014f67c0b8ef93702615bf69acb2d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_rescue_checks.cpp",
+      "path": "tests/f4bc_rescue_checks.cpp",
+      "sha256": "8af75f722ad13d9d54355aff534a59329b38278e66bd99e3547d15d5f0aa00b2",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_return_checks.cpp",
+      "path": "tests/f4bc_return_checks.cpp",
+      "sha256": "38873dae22cc98d37a244699d435fc4b201f0cf25a00928e29418624eb40341f",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_save_checks.cpp",
+      "path": "tests/f4bc_save_checks.cpp",
+      "sha256": "b8d61a3c05e45ff1da36a895ca25b2b0c93548880228aeb0e910c83e64ec8cbc",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_suneo_checks.cpp",
+      "path": "tests/f4bc_suneo_checks.cpp",
+      "sha256": "d7c7c2bb42ff3671dfe2490d5c5696fe8abed79cc69579fccc4b01e115c31576",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_tooth_checks.cpp",
+      "path": "tests/f4bc_tooth_checks.cpp",
+      "sha256": "e8dc562fd49d60374f966b0bdd0ccdd2235dca02060a44448dcbc1bca2392c74",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4bc_validation_checks.py",
+      "path": "tests/f4bc_validation_checks.py",
+      "sha256": "0103f127510c4c85f49ae22dafad3d2d7d1710dc4d6bb6c565a52b289d9c3af3",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/f4full_burn_progress_checks.cpp",
+      "path": "tests/f4full_burn_progress_checks.cpp",
+      "sha256": "932d6a523e5f68d72f4e2e93789dd577919609e4ba8d8908eb521d7ba23b60e7",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_content_checks.cpp",
+      "path": "tests/f4full_content_checks.cpp",
+      "sha256": "1a67abc3018d038d7f616d6cb998063ac11e760bb747f5f65efca397cea7c04e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_crocodile_checks.cpp",
+      "path": "tests/f4full_crocodile_checks.cpp",
+      "sha256": "785309da7a933936ea409e567cd11240ca91b9cb8e6bb5a3357ea0fb49a09b92",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_crocodile_presentation_checks.cpp",
+      "path": "tests/f4full_crocodile_presentation_checks.cpp",
+      "sha256": "070231742a2ec065d63804d30568f7f4bc031985322c60a4e6f17e8265cddad6",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_door_checks.cpp",
+      "path": "tests/f4full_door_checks.cpp",
+      "sha256": "310066fa0ee2dd0aeb12f236b95e40a1b9428a510558172b56d06e342dd0ea89",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_drainage_checks.cpp",
+      "path": "tests/f4full_drainage_checks.cpp",
+      "sha256": "f0d81e61cf644ec4d46bb5ca1238eedfc715f18c451da92a47158f02ee67e0c8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_evacuation_checks.cpp",
+      "path": "tests/f4full_evacuation_checks.cpp",
+      "sha256": "19630f24ee87ad113c1101f5c0704825016846f2181bd2afecf6f867138e49e3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_final_guard_checks.cpp",
+      "path": "tests/f4full_final_guard_checks.cpp",
+      "sha256": "5dc5d216a203c6ab215de5ac1af98c5e81a6aca6d9258f7646b0946c6811d5ef",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_gl_loader_checks.cpp",
+      "path": "tests/f4full_gl_loader_checks.cpp",
+      "sha256": "d216d963b04f0b0e8f367e1e174065f729f5949272870d63c63918fe4e10a8f1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_guard_checks.cpp",
+      "path": "tests/f4full_guard_checks.cpp",
+      "sha256": "b33213a3b70ec3fa3379de38e00e01a0e64e8a18411440ae3bad77f451a4de35",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_i54_checks.cpp",
+      "path": "tests/f4full_i54_checks.cpp",
+      "sha256": "2f7579ff5bdedb700bd59dbf3192ccce3379f62b5effa05b44d0ed1a947d76c0",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_key_flow_checks.cpp",
+      "path": "tests/f4full_key_flow_checks.cpp",
+      "sha256": "5673d7789e39a0f38ccf16aeda1d1f061198aa88b98a289ec578d3a9cba5b939",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_message_checks.cpp",
+      "path": "tests/f4full_message_checks.cpp",
+      "sha256": "fd77cf31c6b522f9cf7aba03f490b508168fd4b89593775bd8b7e274219d5db3",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/f4full_natural_checks.cpp",
+      "path": "tests/f4full_natural_checks.cpp",
+      "sha256": "7c63c60c9269f6e71e984f344378c5194ff42cc7ba78b465c138470a089069c5",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_parking_checks.cpp",
+      "path": "tests/f4full_parking_checks.cpp",
+      "sha256": "480f7483f479a7251e8caed0abfb3e0a8a8a3d7fa833b8c7d99a9fae6635c391",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_picture_checks.cpp",
+      "path": "tests/f4full_picture_checks.cpp",
+      "sha256": "c39a1eb706f360480fb9bb61f241797ebddff2d3eb52af6030c55dc727575bd2",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_player_recovery_checks.cpp",
+      "path": "tests/f4full_player_recovery_checks.cpp",
+      "sha256": "c9afb870e2bc6bbedeb4a2b614a29b9cd274ae52e9ae6bca16e0b31519abca24",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_post_croc_checks.cpp",
+      "path": "tests/f4full_post_croc_checks.cpp",
+      "sha256": "3908ac9e5b68a6b9f5735a7f7671d79213fb856fedb3f591f8f19a93f1424e73",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_power_flow_checks.cpp",
+      "path": "tests/f4full_power_flow_checks.cpp",
+      "sha256": "c6beb819004f82adf892beb01a511089f524ce5965b299cfe12053a4037dd590",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_pursuer_checks.cpp",
+      "path": "tests/f4full_pursuer_checks.cpp",
+      "sha256": "88cc353eae4930221780a5395426928b3cda7cd008b8856155cf32d16a03f57c",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_rescue_checks.cpp",
+      "path": "tests/f4full_rescue_checks.cpp",
+      "sha256": "c98ca12c1f5e761de0ccafcbf91345ca860609b2a1a318ede77e6641efbbe54d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_rescue_enemy_checks.cpp",
+      "path": "tests/f4full_rescue_enemy_checks.cpp",
+      "sha256": "de283bea092246ecae4350bc21592471ce3fb1f1b3e56ed16bfc53ad3f8f6426",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_save_matrix_checks.cpp",
+      "path": "tests/f4full_save_matrix_checks.cpp",
+      "sha256": "a06dc95a7e6c36318d73c5a43de91f4d747e0c301bcb51c97fbc34cea30b4bec",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_save_matrix_process.py",
+      "path": "tests/f4full_save_matrix_process.py",
+      "sha256": "376819d583d7b90fcebde70232ffce1b1de6d1059d940d47bcc6ec68d37aa750",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/f4full_spider_checks.cpp",
+      "path": "tests/f4full_spider_checks.cpp",
+      "sha256": "0f7c9ff9125c00a5a5fb0c7d04885968d407bedfcb7179165adc41dd6a8a2d03",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_state_checks.cpp",
+      "path": "tests/f4full_state_checks.cpp",
+      "sha256": "1c9df5f0197a95d661710d876e9653e2a005ef41cb52dad343247979cb570ff8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_tank_checks.cpp",
+      "path": "tests/f4full_tank_checks.cpp",
+      "sha256": "9635c3d5fa82cf7b7aea64e4bbb514ea768f84aaa020a0c73a1929e65545711d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_training_checks.cpp",
+      "path": "tests/f4full_training_checks.cpp",
+      "sha256": "a00eec90206ef1611e560e3b86c1d16c447a21328cf2b4bf7dbe2fbfe762c196",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_training_flow_checks.cpp",
+      "path": "tests/f4full_training_flow_checks.cpp",
+      "sha256": "bc1c5f5fe6a45f73da84960d57e2e69ab766a93f6a59c7aafc0e0d6d0be84287",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_truth_checks.cpp",
+      "path": "tests/f4full_truth_checks.cpp",
+      "sha256": "6e4313dfbf760f9f838c6811cdf51714f916c39bbe30dcea68435ed0ebbe6f0d",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/f4full_underground_power_checks.cpp",
+      "path": "tests/f4full_underground_power_checks.cpp",
+      "sha256": "b3b4fd6be72351d774db9d749f2ab663e8bda5dcab8a612c72e99e5e654627c1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_underground_tools_checks.cpp",
+      "path": "tests/f4full_underground_tools_checks.cpp",
+      "sha256": "b67a6b9706963ee5b0c46bca9e6ce69a23d42cbc990286aacccf0f01e3678b89",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f4full_weapon_checks.cpp",
+      "path": "tests/f4full_weapon_checks.cpp",
+      "sha256": "b75427fe55ee2becd8761ac8723d1fa254b86773e8f3379ea671d1146e4a532a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f5_menu_closure_checks.cpp",
+      "path": "tests/f5_menu_closure_checks.cpp",
+      "sha256": "c14dc2763f2681b2a0a9bd90949ba24bed4264eecdc206b66224320105a333cc",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/f5_recovery_checks.cpp",
+      "path": "tests/f5_recovery_checks.cpp",
+      "sha256": "fafd4f265eb389e7b46827d9bd4657668f912ab9410d34648d08829edac32d82",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/formal_menu_checks.cpp",
+      "path": "tests/formal_menu_checks.cpp",
+      "sha256": "6c6a1c9be474f42c4a02860c116bbd4e818a20c9d28b4923412784e48c299bdc",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/formal_menu_presentation.cpp",
+      "path": "tests/formal_menu_presentation.cpp",
+      "sha256": "7c1ab08466088f6b789014fccdfb357ff4ea9900bc185f7df93cb1968a5002df",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_aviation_checks.cpp",
+      "path": "tests/g0_aviation_checks.cpp",
+      "sha256": "16c69def8370ab2401d3faf642af6ab91ddd2452c11b60ed4f8c313a581f822b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_chapter_checks.cpp",
+      "path": "tests/g0_chapter_checks.cpp",
+      "sha256": "63b17ed659a85d50d79399cbd5f945213a0ae59c7570918ad7b6667407a0d101",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_hangar_checks.cpp",
+      "path": "tests/g0_hangar_checks.cpp",
+      "sha256": "4b4e6fe1fa76632f2fc9ce81cbb221cb91e75fa263fa50ef3fb2ea7301ae3a6a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_natural_driver.h",
+      "path": "tests/g0_natural_driver.h",
+      "sha256": "7eef7ee7f2eb4f77718ee1e14ba2a2df073d67ff203047d26a0aedde9f1ca5e2",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g0_prebattle_checks.cpp",
+      "path": "tests/g0_prebattle_checks.cpp",
+      "sha256": "53f8410e9a4e67b59bb6729fb1bbd63ab4ab126a42adaab5468b41d6c9c9775e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_save_checks.cpp",
+      "path": "tests/g0_save_checks.cpp",
+      "sha256": "54b67f533e9d856696d690badaa783d9bfd6934ee1846051a3a8f6e5be16e5c1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_victory_checks.cpp",
+      "path": "tests/g0_victory_checks.cpp",
+      "sha256": "8be3a9d11f7ccc0bfaf1d32b4441474a409620a671226bb6bb721184f1824ede",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g0_wake_checks.cpp",
+      "path": "tests/g0_wake_checks.cpp",
+      "sha256": "b473c1f46960a95cc4585f484d2d52298d12359661c1f638b97d287f53631dc0",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_common_effect_checks.cpp",
+      "path": "tests/g1_common_effect_checks.cpp",
+      "sha256": "4ee44b7008b53d42abedc160720c96be8334f263efd169c2ed3703914ec73e3b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_entry_checks.cpp",
+      "path": "tests/g1_entry_checks.cpp",
+      "sha256": "bf79f53ccb3d9e55ae962fcd80417525ed6aed2fcec542d386afb5e9d396ba31",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_hunter_rules.h",
+      "path": "tests/g1_hunter_rules.h",
+      "sha256": "ae076b979e526d459ad1124497147bda211b91095df3eb83a74c730bcadad80f",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g1_hunters_checks.cpp",
+      "path": "tests/g1_hunters_checks.cpp",
+      "sha256": "f3f169ab460453f64b7bdf4afc48b5d9e0eb6beecb35698e73af1f5566b000de",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_kitchen_checks.cpp",
+      "path": "tests/g1_kitchen_checks.cpp",
+      "sha256": "52b00472ade72bedecf5d23b1d8410110525dd0fed41293666232c20f0533235",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_mirror_checks.cpp",
+      "path": "tests/g1_mirror_checks.cpp",
+      "sha256": "eba15bdfac9572a432f2a1f7e05a4a25f9e02c915fce960ff82c014296d4cdea",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_monitor_checks.cpp",
+      "path": "tests/g1_monitor_checks.cpp",
+      "sha256": "894cafb42c5047765292c7bcf7fff81ae3520da9536f03da5644096a94e13dfa",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_natural_driver.h",
+      "path": "tests/g1_natural_driver.h",
+      "sha256": "8a276761852cbb84adc0cf43a9f15c3605aad084a9b71f54c38dacf157aa5899",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g1_piano_checks.cpp",
+      "path": "tests/g1_piano_checks.cpp",
+      "sha256": "4e2d24c9001b275b436cfbfaa20300f477f5e160837ddd76a15b20c2b708ab1e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_piano_driver.h",
+      "path": "tests/g1_piano_driver.h",
+      "sha256": "16e326f52830c6d87c159c76ce49d52ad650afa9d5c2e324b047c950b3fe92ba",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g1_puzzles_checks.cpp",
+      "path": "tests/g1_puzzles_checks.cpp",
+      "sha256": "71dde6b67683cbd1cc9a43008fae7e697a27c228dbf2740366a8ef9e10219049",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_stage_checks.cpp",
+      "path": "tests/g1_stage_checks.cpp",
+      "sha256": "e14b1e13b6a1530a078afa72976e4d2861c41a149519f8046e6d0040d1142b73",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_stone_checks.cpp",
+      "path": "tests/g1_stone_checks.cpp",
+      "sha256": "852048573afda4cc5a354b9fd9c04034d7fbef498c5d75b6328401035f40f7c9",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g1_wax_checks.cpp",
+      "path": "tests/g1_wax_checks.cpp",
+      "sha256": "b6881abd3e68c92ae1ed9c4a70acbfe5fde582c1e0f77b02afc718de210ccef8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_entry_checks.cpp",
+      "path": "tests/g2_entry_checks.cpp",
+      "sha256": "1dd8544850d73da504dd1db91c967dbbc3e4b70694c22c3590e6a98c5d1c6da3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_hunters_checks.cpp",
+      "path": "tests/g2_hunters_checks.cpp",
+      "sha256": "98efba7652ed0f71fd627aa8776262461e74bc8b7b8c9f783169c140945424fc",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_integration_checks.cpp",
+      "path": "tests/g2_integration_checks.cpp",
+      "sha256": "7db7d1284ce561b0df5a4716d10702d9e6ffa858dd47a97dbaa68678086cd193",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_lickers_checks.cpp",
+      "path": "tests/g2_lickers_checks.cpp",
+      "sha256": "3be77910513ce10fa99dbdb247efb64e41bf59810a702c6a51f7fc51d646981d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_natural_driver.h",
+      "path": "tests/g2_natural_driver.h",
+      "sha256": "f51114ae67cd0ec7d76124852ed28081dd96418437c73b6ad57f44a5c1c37ab7",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g2_power_checks.cpp",
+      "path": "tests/g2_power_checks.cpp",
+      "sha256": "92c4d1dac9d532919d5e2ce3bdb683d0964c258ea6748a81da80aa8b6d1b343e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_registration_checks.cpp",
+      "path": "tests/g2_registration_checks.cpp",
+      "sha256": "92fb2e5da12b231cb8b0e6c88eba5126162abb5df0057ba35a86d6b9ecb845e3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_registration_visual.cpp",
+      "path": "tests/g2_registration_visual.cpp",
+      "sha256": "78e2483b6e568809e632cfa553d136b3bfac5ef5a7907d4fa1facd5b685ff730",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g2_server_checks.cpp",
+      "path": "tests/g2_server_checks.cpp",
+      "sha256": "8ae8d8149e04689b492fd0aff3b3b497c5e22af4db244ab10045e1b5b5ae4118",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_access_checks.cpp",
+      "path": "tests/g3_access_checks.cpp",
+      "sha256": "363206428402c95812c6e96d0f56892fbec75b0435b80fe10873f67804ab4054",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/g3_access_cold_visual.cpp",
+      "path": "tests/g3_access_cold_visual.cpp",
+      "sha256": "a37e9ef6cc05fa1d0f9872b97f2433d03f76c95c11bf0545b57c6b8658a03071",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/g3_boss_checks.cpp",
+      "path": "tests/g3_boss_checks.cpp",
+      "sha256": "f314ea71a6572d1a562859a3f1793ea9b05716382862840214c9bad6c8890773",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_boss_visual.cpp",
+      "path": "tests/g3_boss_visual.cpp",
+      "sha256": "8e4f7e78b2819da8b016891b759c9ded56295120abb3c754d1aabfeddb5f1dab",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_heat_checks.cpp",
+      "path": "tests/g3_heat_checks.cpp",
+      "sha256": "7d444140965a17c2e277a8b08dec9364f7256ab56c4807aed39cd839a99bbf27",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_heat_driver.h",
+      "path": "tests/g3_heat_driver.h",
+      "sha256": "38d80876dfbd420fab2c508b08ccc06deb7b2936248c75a78ec33a52f4983f51",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g3_heat_visual.cpp",
+      "path": "tests/g3_heat_visual.cpp",
+      "sha256": "3ebe3c2083650eed97c10b5ac6ba94768673ed816702cc31049860b6bf4cc04d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_hunters_checks.cpp",
+      "path": "tests/g3_hunters_checks.cpp",
+      "sha256": "361405411f9f1db87ca210b6c39b1f9675449736d9011b2801a5c4da9926a1c8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_hunters_driver.h",
+      "path": "tests/g3_hunters_driver.h",
+      "sha256": "7481bbc7f72b89a8c99327511864cfdacda2365a1f21dde619186b21706ea2a3",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g3_hunters_visual.cpp",
+      "path": "tests/g3_hunters_visual.cpp",
+      "sha256": "fae66e98f9a12088d5780f744549b74751e6d92c08ec5e4e3251474447e04203",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_reunion_checks.cpp",
+      "path": "tests/g3_reunion_checks.cpp",
+      "sha256": "cf790549c0797c63ff15b7350cfbc071c94dd5437ecdea31693d01ca7633610b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_route_checks.cpp",
+      "path": "tests/g3_route_checks.cpp",
+      "sha256": "83db3e427869450748bc5ed2c461c39bb89e911b36cb8e4cf9e81bfe90af3b18",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_route_driver.h",
+      "path": "tests/g3_route_driver.h",
+      "sha256": "76343d2fa76c033ff22a5826441c3c4b7067173122819708c263bc82e5be19d1",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g3_shelves_checks.cpp",
+      "path": "tests/g3_shelves_checks.cpp",
+      "sha256": "191b90b0db94d713ba8f8c2288025726f6b94572285acd4fd197fe92f2408e82",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_shelves_driver.h",
+      "path": "tests/g3_shelves_driver.h",
+      "sha256": "df369e3b8a771e321a4f408a0c9893055f4a1d3dadd911846fe3a19ebfd5d8ff",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g3_shelves_visual.cpp",
+      "path": "tests/g3_shelves_visual.cpp",
+      "sha256": "2a857cac1d5a87e87505656ebf72456f7c7d0266ad142de5bee1625e9720d762",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_stage_checks.cpp",
+      "path": "tests/g3_stage_checks.cpp",
+      "sha256": "c9210c12e94f5b4ca825036f84f271dca62c607c44dad67e85dbdc0ee957be57",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g3_stage_routes.h",
+      "path": "tests/g3_stage_routes.h",
+      "sha256": "92b8e4154dc6279c0abe7c96290ff54b18b08277a4ff4731cb1b8adb9bc4cbd3",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g4_dora_checks.cpp",
+      "path": "tests/g4_dora_checks.cpp",
+      "sha256": "211aeef61d469d97585ff5263cd69160ea53461218e3589966f8ec7d0ca9bc8d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g4_dora_render.h",
+      "path": "tests/g4_dora_render.h",
+      "sha256": "2c6585cd666e6ca59ff85a59f095d8cbf110a0748ac1c5fceaa23b87828561ed",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g4_tower_checks.cpp",
+      "path": "tests/g4_tower_checks.cpp",
+      "sha256": "758c3a9bff1a7f3f74023a0d4dbe650a7866e93a6be848860f90b5c612534b95",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g4_truth_checks.cpp",
+      "path": "tests/g4_truth_checks.cpp",
+      "sha256": "18c80277d63853d2a9d935556b49cc67f70ab36671d9b71deb333920edaeff4d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g4_truth_driver.h",
+      "path": "tests/g4_truth_driver.h",
+      "sha256": "84203c847217d3f774dda1b91265a79818db6dfddc2d7e0562a582f80e96677a",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g5_aftermath_checks.cpp",
+      "path": "tests/g5_aftermath_checks.cpp",
+      "sha256": "790a124f62d36ca0e5764427829f85bbaeb7c6c5380e6b112c06ee6f10e667f6",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g5_cash_checks.cpp",
+      "path": "tests/g5_cash_checks.cpp",
+      "sha256": "175f2d645d13b5158dcfa93b56505be39bf08925c751b7a95c8a684d44f5b3ae",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g5_control_checks.cpp",
+      "path": "tests/g5_control_checks.cpp",
+      "sha256": "97f90f639fa35c2976884745d2d8b691c8cfb86402a4b8f9a6b9659abe79e02a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g5_control_driver.h",
+      "path": "tests/g5_control_driver.h",
+      "sha256": "b41494dcdd6b4fd05c85cbf83756087c550bb2f347f69002fed351d2aeea4cab",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g6_cargo_checks.cpp",
+      "path": "tests/g6_cargo_checks.cpp",
+      "sha256": "f85ccf7c7616a10c7e65753a40f5d8019a388db7b404fc9348854094983b8ff4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_cargo_driver.h",
+      "path": "tests/g6_cargo_driver.h",
+      "sha256": "2abf9d0c557dd9ba08fcf3da0d301aef8c4815f176a42a31e5712c69151d7767",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g6_direct_save_checks.cpp",
+      "path": "tests/g6_direct_save_checks.cpp",
+      "sha256": "21517102911e03c137a8bea4fc5fe82d8237ea69fd0c1abd02995772ff955b48",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_memorial_checks.cpp",
+      "path": "tests/g6_memorial_checks.cpp",
+      "sha256": "39810789b6dabe3c128e4a1c9500ea6726045fa1d867e7bf57038908e58a581a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_memorial_driver.h",
+      "path": "tests/g6_memorial_driver.h",
+      "sha256": "17a3961b86cf68059382bfe1b3c1d307912fa8758d3be37ad1852b281001454a",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g6_return_checks.cpp",
+      "path": "tests/g6_return_checks.cpp",
+      "sha256": "f4f681b60665c496f12c2a6897e769766d407b675d12c4f994bb0f2b7a8f0d33",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_return_visual.cpp",
+      "path": "tests/g6_return_visual.cpp",
+      "sha256": "64dfbe54eb71f54040accd6f095d5c6b6c531cf6e6fa8aa4fec98bbdb28254d7",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_terminal_checks.cpp",
+      "path": "tests/g6_terminal_checks.cpp",
+      "sha256": "61e3b8a1a2675d493fe7ce764f0798d6655ac88d3b75100979cbe58b4902e648",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g6_warehouse_checks.cpp",
+      "path": "tests/g6_warehouse_checks.cpp",
+      "sha256": "bfec5f9efb4615820d928ad7fee3f70902be083d26b54f62d0befd77fef42cda",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_bonus_checks.cpp",
+      "path": "tests/g7_bonus_checks.cpp",
+      "sha256": "6ac6e004a8ce5e27b569d58ee76dfd4733c5c216d8fc5c6f8024dbbd40b7dda6",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_clear_checks.cpp",
+      "path": "tests/g7_clear_checks.cpp",
+      "sha256": "369964c840d4b69773f0e90b448c4bc527d5ae60cfaeef79fd1c0cf96c7e3835",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_cycle_checks.cpp",
+      "path": "tests/g7_cycle_checks.cpp",
+      "sha256": "08ed5ee7bac0869496c4dcaf64d993231ca084ebceac629d12502fd9f7ea7f25",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_departure_checks.cpp",
+      "path": "tests/g7_departure_checks.cpp",
+      "sha256": "41dabc81d51ccad9c11ee96b74be76b415dc75f568c1f7c8bea3ffd9f1dc35ca",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_epilogue_checks.cpp",
+      "path": "tests/g7_epilogue_checks.cpp",
+      "sha256": "f86fdf4b2b9f4082adf4dd10dd93ba9ef17e44793e07663f5ddfd583e41af447",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_equipment_checks.cpp",
+      "path": "tests/g7_equipment_checks.cpp",
+      "sha256": "281657b6d3300a775bcc8252f289456cde6c03e8baba8a992a4052245bef2b88",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_final_checks.cpp",
+      "path": "tests/g7_final_checks.cpp",
+      "sha256": "b10b46f5b916c9be769cbeca44f440e9ab57648c3143e5a86efa119bf05076d4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_integration_checks.cpp",
+      "path": "tests/g7_integration_checks.cpp",
+      "sha256": "ad94fa87853b0d78860526303b5aebd0a860ec766f78f38ebc6824a418124aec",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_score_checks.cpp",
+      "path": "tests/g7_score_checks.cpp",
+      "sha256": "d1f4cee244cb340f2972271c28b5b462cb4ba3e73698b285a5c789cd6d8217e1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g7_score_rules.cpp",
+      "path": "tests/g7_score_rules.cpp",
+      "sha256": "1b301ffb3d4edcd2628245e6fee88c83b4e95ce95dd1060370085814f12a78a8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_continue_checks.cpp",
+      "path": "tests/g8_continue_checks.cpp",
+      "sha256": "2bcff8a9648145c9f3b0d38ae99cb2b509c0122da4063f94c466c590a5dde0f7",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_continue_natural_driver.h",
+      "path": "tests/g8_continue_natural_driver.h",
+      "sha256": "15f1f004c2c7f5ef04c61ee1e4fce892d2752cd8fbdf6bacd6ffded120f4e6b7",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g8_cycle_checks.cpp",
+      "path": "tests/g8_cycle_checks.cpp",
+      "sha256": "2a7cb09ccbe02d54e16be598fb37875e708c60f2ac2d9571e0dcf79e0ec489af",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_first_part_checks.cpp",
+      "path": "tests/g8_first_part_checks.cpp",
+      "sha256": "f7f0a20e5a9b6b5fd727c763db97b70400600e6433ce10044b009c231d655c6a",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_initialization_checks.cpp",
+      "path": "tests/g8_initialization_checks.cpp",
+      "sha256": "fb79d491c5938630e3814ccff4dff4865f61ae2fcdc009b557e3e24f4d71a27d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_late_game_checks.cpp",
+      "path": "tests/g8_late_game_checks.cpp",
+      "sha256": "45cae28ac0d35ba0dda8478818554bde96f67ae15e01f2c0dd9bd9e97e45b376",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_region_checks.cpp",
+      "path": "tests/g8_region_checks.cpp",
+      "sha256": "9f09b440efc049c7155c71ea4b51e974bd7c71400ab7f424074686672558e0ab",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g8_region_driver.h",
+      "path": "tests/g8_region_driver.h",
+      "sha256": "26a6c6b093a0f0e41f21e19e97749926f9f83c9b0100c006dd9d9eb04b8868a7",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/g9_audio_checks.cpp",
+      "path": "tests/g9_audio_checks.cpp",
+      "sha256": "96d16a2ed027ef4a785cad8b88cbe33e35708f0df9bf8c05676314e78ff6b7ed",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g9_composition_checks.cpp",
+      "path": "tests/g9_composition_checks.cpp",
+      "sha256": "1ec07d240f58c02501abc568d3d6f5bab0eae05caafc0292fa96e07746a5d668",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g9_native_window_checks.cpp",
+      "path": "tests/g9_native_window_checks.cpp",
+      "sha256": "dd55c081c90792f141fb80256a2b25bacacbc697b14caef14167fad80bf6d88d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/g9_presentation_checks.cpp",
+      "path": "tests/g9_presentation_checks.cpp",
+      "sha256": "76c0b6f629a0bc046ce338d20473623285caeccac7d6d014ec4e4b220919d10f",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/item_use_checks.cpp",
+      "path": "tests/item_use_checks.cpp",
+      "sha256": "ff28e508f53637a6e7693c111d3086bb507f06d2799ada7f5d5375f3f4bd08f4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/licker_checks.cpp",
+      "path": "tests/licker_checks.cpp",
+      "sha256": "12ef2313dedb3bfbddfd9d9c5e7e563129735ad5bcb49f52c6e336228ec26450",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/licker_window.cpp",
+      "path": "tests/licker_window.cpp",
+      "sha256": "0032966f6dc7afaa80b6adebd2cb6dd233251b8a0611e8f24c86e33894bfdbec",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/local_text_fixtures.h",
+      "path": "tests/local_text_fixtures.h",
+      "sha256": "721261766f0dad2afda32ecfff5d76d9e4ecc7fa80cba2578512aefe52b47d02",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/media_contract_checks.cpp",
+      "path": "tests/media_contract_checks.cpp",
+      "sha256": "6082c1c021c6390016a59cb6cb69a03eda33027c9e60d22146d83e9c86fe8043",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/meeting_checks.cpp",
+      "path": "tests/meeting_checks.cpp",
+      "sha256": "8d0503385f2cd03ce0005e2b60dfdf80c6332c91e8c4afde1f85406269b97eb5",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/meeting_return_checks.cpp",
+      "path": "tests/meeting_return_checks.cpp",
+      "sha256": "e08563e2eca3a140fc5d7105859857da73e4eb45a3c3b3d36d957962176f1570",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/meeting_window.cpp",
+      "path": "tests/meeting_window.cpp",
+      "sha256": "27fac51d26e9a33dd3e00072213e0a4e8d40fc539940a02854a1761ada68fa20",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/mixing_checks.cpp",
+      "path": "tests/mixing_checks.cpp",
+      "sha256": "472357e4ed710546510889210262d5b26091f8538ad5afa420e350cf2f702634",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/mixing_window.cpp",
+      "path": "tests/mixing_window.cpp",
+      "sha256": "41c52d3800e08d27b0ba01de6bbc9a006b0162bfaca279625d30bd44deae3205",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/movement_checks.cpp",
+      "path": "tests/movement_checks.cpp",
+      "sha256": "650d105b386f8bbe9dae678f111a8984234930b09a289520a59f1a1da7f4e8e8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/multiple_enemy_checks.cpp",
+      "path": "tests/multiple_enemy_checks.cpp",
+      "sha256": "d6076ba4c26b6462fc6a63cf17ef35059559932856708d7024ae8482ec20abf3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/opening_checks.cpp",
+      "path": "tests/opening_checks.cpp",
+      "sha256": "66e843f70ad15c19afc4b0cd9077b02e3e8943511fe8991eca56c1177450396e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/opening_driver.h",
+      "path": "tests/opening_driver.h",
+      "sha256": "ec0e5f535dcabd507ffb9d8ec6b049a61efb49138946b3ecb2efcd656231d6fe",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/opening_window.cpp",
+      "path": "tests/opening_window.cpp",
+      "sha256": "b4429d69019fc4e393e9ab6401133bf81c018cbffa56e8a73cc827869442633c",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/original_dialogue_checks.cpp",
+      "path": "tests/original_dialogue_checks.cpp",
+      "sha256": "baf59b48643667c9d501c595c181dbf40b2fc5fdf4429841e164547839fd13da",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/pcm_loop_checks.cpp",
+      "path": "tests/pcm_loop_checks.cpp",
+      "sha256": "3afa47f466adcd25a649e07227e1fb9475ecbcab1c4ab1b08ce670097d9ee00d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/performance_checks.cpp",
+      "path": "tests/performance_checks.cpp",
+      "sha256": "3547130c281e6d055d4f80012e083394c89ee8b2eb1dda17654d4e0099006ce1",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/pickup_checks.cpp",
+      "path": "tests/pickup_checks.cpp",
+      "sha256": "b71a01c13d20cd9bed00e102b1dbda14e8bb41c9fdaae5697a11e6bbcdda1b3b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/playtest_integration_checks.cpp",
+      "path": "tests/playtest_integration_checks.cpp",
+      "sha256": "e8f25819d8acec6064bf75a714d74e2ada24056a572892a949c9ab714b62c36b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/portable_entry_checks.py",
+      "path": "tests/portable_entry_checks.py",
+      "sha256": "1876aeab876abcf0330d99e16ed048afb6deafbd2d4dbebf405e97f5f05ff91f",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/portable_runtime_checks.cpp",
+      "path": "tests/portable_runtime_checks.cpp",
+      "sha256": "ae84367b3e2b2e533a184ae16458e3272ac367fe074d843b22c9880b8a6d428b",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/prompt_checks.cpp",
+      "path": "tests/prompt_checks.cpp",
+      "sha256": "07c0bd1aa95fe6ad0022d2aa52585c3b9a50a01999879ed1e129c7e79136b057",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/prompt_window.cpp",
+      "path": "tests/prompt_window.cpp",
+      "sha256": "701c7b90b07f4d069156ee34db88caee6abe1254cdfa17b487c5ca6261ee3965",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/release_save_checks.cpp",
+      "path": "tests/release_save_checks.cpp",
+      "sha256": "82fce35134ead1a7c4527d39bdf2a29479a3ab133b44957880a5363f1b9cae57",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/reload_equipment_checks.cpp",
+      "path": "tests/reload_equipment_checks.cpp",
+      "sha256": "509dca8b3b06f7c8dc5fd589234dd7120df6a3143719d1737d21a3ce5513f302",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/reload_equipment_window.cpp",
+      "path": "tests/reload_equipment_window.cpp",
+      "sha256": "37a93258dade4e9374848b446c5afb67358dc1d4ff2bc91315752400b094e923",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/room_map_checks.cpp",
+      "path": "tests/room_map_checks.cpp",
+      "sha256": "c5184b972fe5bf0e4fc9fc142eadb0232f12f12651ad47fcef8419677f2c9296",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/route_checks.cpp",
+      "path": "tests/route_checks.cpp",
+      "sha256": "1876452c4ec975c734081a587770c734758e61ce0a3e7d852d9d015e1a0feba8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_enemy_activation_checks.cpp",
+      "path": "tests/save_enemy_activation_checks.cpp",
+      "sha256": "ff8e072c4188daf4b9094f3e3e8d1565a41b82cc827fc9e968808d9773122e98",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_files_checks.cpp",
+      "path": "tests/save_files_checks.cpp",
+      "sha256": "52566030e3369efb1d403cfb7878630a02d7e03c72cbbaa38115c7535b9f5aa8",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_flow_checks.cpp",
+      "path": "tests/save_flow_checks.cpp",
+      "sha256": "430d3b2beb36d9531e439ca74d16d9f42bdb8aeb87b0f65048d49181d03dd668",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_performance_checks.cpp",
+      "path": "tests/save_performance_checks.cpp",
+      "sha256": "eed7888cbfec32cbcd751ed15c63b2711fd655b5afdc26729bbbbafecd3d37db",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_snapshot_checks.cpp",
+      "path": "tests/save_snapshot_checks.cpp",
+      "sha256": "ad7f099d577ab329289dd2df97b45b502afa28bde652406dcf0f58b1a17c3782",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/save_suite.cmake",
+      "path": "tests/save_suite.cmake",
+      "sha256": "9cc379a6310573ea534ad5d94d50f21ed7fc7c8ebce748a177a0bc3c29678dd6",
+      "basis": "handwritten isolated process/check launcher; no runtime fixture payload or absolute user path"
+    },
+    {
+      "source": "tests/save_window.cpp",
+      "path": "tests/save_window.cpp",
+      "sha256": "5d2ebefd4562883ed25f5f59f567d394d0804f8becf6a767121dfd2ee5c30f6c",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/scene_camera_checks.cpp",
+      "path": "tests/scene_camera_checks.cpp",
+      "sha256": "ccc419cc2a87a170ad0243ea7cf6ccbea20b8cd03e3721f0d05618815aefdb4d",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/scene_checks.cpp",
+      "path": "tests/scene_checks.cpp",
+      "sha256": "bca3c97566366075f64f7c2e4b7c25e6c414cf9bbf256c2c3f166a137dd7de57",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/session_checks.cpp",
+      "path": "tests/session_checks.cpp",
+      "sha256": "ce87fd6c32b64705107717988a7307db8ba2220b1999f6d24060ab7ef9a38e24",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/shotgun_checks.cpp",
+      "path": "tests/shotgun_checks.cpp",
+      "sha256": "d5fbb436e229cbc337c9e0100d940530e9d7a06ecf8b76215ed41a2feb33fd02",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/shotgun_window.cpp",
+      "path": "tests/shotgun_window.cpp",
+      "sha256": "3070e5e0b6ee1760ae73e6b57efbd0ebc1357ee0fa87e3c10bfa8fff686c10b3",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/story_background_checks.cpp",
+      "path": "tests/story_background_checks.cpp",
+      "sha256": "f0bb1f17571e047b530f464e9faa81486fafdc04db67716460a04442dbc5100e",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/test_prepare_public_source.py",
+      "path": "tests/test_prepare_public_source.py",
+      "sha256": "ec32c1ff85ebd99deb780e694bd6a56ac9c58893152b7d17a1c32f7850bf1ad4",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/test_public_source_lower.py",
+      "path": "tests/test_public_source_lower.py",
+      "sha256": "28e06e5cfdf70abe646518674825f8b659ba4fa6883dd189a43a5463fcfd6903",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tests/text_cell_checks.cpp",
+      "path": "tests/text_cell_checks.cpp",
+      "sha256": "c1371eee7ec790fe0aa81b2a858a81f07e0c396f66e86c7ee36e60876b3aca89",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/title_load_checks.cpp",
+      "path": "tests/title_load_checks.cpp",
+      "sha256": "73f7a49fa37ed4796848c57ff8c9546bff9f0774769fd065e99e71ea2ad19367",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/title_navigation.h",
+      "path": "tests/title_navigation.h",
+      "sha256": "94690757057f390d8075d511853f54eef21327c1ffd7a7284a9cc2ccf9c43f71",
+      "basis": "handwritten natural-driver/assertion helper; identifiers and short labels only; no original narrative payload"
+    },
+    {
+      "source": "tests/tool_use_checks.cpp",
+      "path": "tests/tool_use_checks.cpp",
+      "sha256": "e94570bbb25bf4bc328f583b6fafb3d7595a6c5ef0e5e591be48505e62694b0f",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/tool_use_window.cpp",
+      "path": "tests/tool_use_window.cpp",
+      "sha256": "2e9ac0c2448ff5e4c4e7dbfd524afb62fc82d56352aed07d4223bd26948581af",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/wardrobe_checks.cpp",
+      "path": "tests/wardrobe_checks.cpp",
+      "sha256": "9e85d391c1bf821d97d081560e048050d2411f7b1e91ed8e70106b07741cdfba",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/wardrobe_window.cpp",
+      "path": "tests/wardrobe_window.cpp",
+      "sha256": "03c8284557a631fea77f09c4e9d3281cf45380a926cac4ae0551de8420479e67",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tests/weapon_checks.cpp",
+      "path": "tests/weapon_checks.cpp",
+      "sha256": "03c6767ceabdb02ddb83d37de94abca066e92e701f572f058fc54da4677d40d4",
+      "basis": "handwritten test harness/assertions; original narrative fixtures excluded; runtime data not bundled"
+    },
+    {
+      "source": "tools/g3-boss-review.json",
+      "path": "tools/g3-boss-review.json",
+      "sha256": "a3c01423fdb5c6408d4db46f2f68495fd35dc0dd6dc87d6d871915dffb2fceb9",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/g3_boss_lower.py",
+      "path": "tools/g3_boss_lower.py",
+      "sha256": "8ef8d74c853e3a66d036784f2546611ab870ee7018b3a46d5ac4b552fdcaa368",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/g4-dora-runtime-review.json",
+      "path": "tools/g4-dora-runtime-review.json",
+      "sha256": "94c2388480257399a65bad4d7f7df21ba41d7a88d91033aac1efbb3a7b9a302b",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/g4_dora_lower.py",
+      "path": "tools/g4_dora_lower.py",
+      "sha256": "efa4942693f22823cd7f9492d4a5e236b3a05cd03226e904da762e466640577f",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/g5-cash-runtime-review.json",
+      "path": "tools/g5-cash-runtime-review.json",
+      "sha256": "fcbc426cee4fc6646ed932aa16130feec934d5637c1504031a99ae425f6196a2",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/g5_cash_lower.py",
+      "path": "tools/g5_cash_lower.py",
+      "sha256": "cdadaa26ed42a4f80d1bbbe9d36f03bb53c6668abf268005d1c975c0929e9c25",
+      "basis": "standard-library lowering logic/anchor checks or checksum-only review metadata; original arrays/text supplied externally"
+    },
+    {
+      "source": "tools/prepare_public_source.py",
+      "path": "tools/prepare_public_source.py",
+      "sha256": "988450dbd880def112332234950953c7200b63f9c0ce8488aa49e66d100c4473",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tools/public-compile-contract.json",
+      "path": "tools/public-compile-contract.json",
+      "sha256": "1103410bbcba89d3d22d0d65cf7998c5b24234c82814527878e6a8996a09d1de",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tools/public_source_lower.py",
+      "path": "tools/public_source_lower.py",
+      "sha256": "fe72124230ea5808a69a32be8cd39e6878ede2488d30a1f21edb20319fa9deec",
+      "basis": "handwritten implementation/test or fixed digest-only content contract; original expression lives in lawful local inputs"
+    },
+    {
+      "source": "tools/slot05_recovery.cpp",
+      "path": "tools/slot05_recovery.cpp",
+      "sha256": "5a332e62d9e44d14751878113ed0c0c0055db64f905f60efcbd46c0f45bd0999",
+      "basis": "handwritten guarded recovery utility required by the existing development CMake target; explicit local parameters, no save payload or personal paths"
+    },
+    {
+      "source": "src/game/dekisugi_program.inc",
+      "path": "src/game/dekisugi_program.inc",
+      "sha256": "758823b2b30b881d5f8a68eb161439f55e9114b0b27ada417187d4850a75a3bc",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "src/game/dora_program.inc",
+      "path": "src/game/dora_program.inc",
+      "sha256": "de5679cd3c046fe25099396aba0d9a5ab45130b49562313185756eccca610f55",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "src/game/cash_program.inc",
+      "path": "src/game/cash_program.inc",
+      "sha256": "866214ef3402b9a13391fd548b2550461be41b8fb9c3f8fa41144ae488f761b0",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "src/game/warehouse_g4_program.inc",
+      "path": "src/game/warehouse_g4_program.inc",
+      "sha256": "d87cb34547994866ae99bb0f1645ffeb7b2d7b83142bfba91dbe306e43694899",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "src/game/final_boss_program.inc",
+      "path": "src/game/final_boss_program.inc",
+      "sha256": "e5e4e43d975f0e3ae5b96aea3f77517b90325dc6a3e5bf69c4877768158d60d6",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "tools/g3-route-doors.inc",
+      "path": "tools/g3-route-doors.inc",
+      "sha256": "6ef45cdc2382764057bd91036362b03bb098ec7e72ee56f339f03dd66deac9db",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "tools/g3-access-cold-room.inc",
+      "path": "tools/g3-access-cold-room.inc",
+      "sha256": "3cc2dae444009be9621756fc738f9cd3687f5b3c1fc114cdc4ee9d375c5536b0",
+      "basis": "reviewed fixed original-expression content include, public content authorization 2026-10-27; excluded from project MIT"
+    },
+    {
+      "source": "docs/release/public-complete-templates/local-text-fixtures.json",
+      "path": "tests/fixtures/original-text.json",
+      "sha256": "2d12a6c13f5bb6cee539956b2c87be23bb87779c4bd973ba1f143dc15276978d",
+      "basis": "original-expression text goldens; excluded from project MIT"
+    },
+    {
+      "source": "docs/release/public-complete-templates/runtime-manifest.json",
+      "path": "runtime-manifest.json",
+      "sha256": "fb346c2320fb1bcceb87efc29f99792f06123c56a7ab62354d5306d242c7a5c7",
+      "basis": "reviewed complete runtime Release parts and exact extracted-file inventory"
+    },
+    {
+      "source": "tools/fetch_runtime.py",
+      "path": "tools/fetch_runtime.py",
+      "sha256": "bf25911a918fabd5ce6632efdf763edf2da7d8f8fea8218f1b10a4a6fc2e20fd",
+      "basis": "handwritten standard-library checked runtime restoration"
+    },
+    {
+      "source": "tests/test_fetch_runtime.py",
+      "path": "tests/test_fetch_runtime.py",
+      "sha256": "351e8d6eca456646b24354915d6f80cac958ba37a375ab5c81a667c1ea19fb22",
+      "basis": "synthetic local ZIP tests without real assets or network"
+    }
+  ]
+}

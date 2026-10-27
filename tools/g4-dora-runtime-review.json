@@ -1,0 +1,12 @@
+{
+  "prepared_sha256": "9e0133b537fa3953c7748219ded917554ed6d20cac5468ff56f9818dcfd61890",
+  "projection_sha256": "c847034602898e17c109419283fb55850b403f865aa07a0859c8a2ed0b2ef3a1",
+  "scope": "CN1.00 complete fixed M192 E2-18 and CE9 lowering; Session/World/Scene owners; source arrays never runtime VM",
+  "local_unknowns": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5"
+  ]
+}

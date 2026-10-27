@@ -1,0 +1,11 @@
+/build/
+/private/
+/local-data/
+/Resources/
+/saves/
+/core
+/core.*
+.DS_Store
+__pycache__/
+/assets/runtime/
+/.runtime-downloads/

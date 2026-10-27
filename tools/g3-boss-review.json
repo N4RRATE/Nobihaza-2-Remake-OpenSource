@@ -1,0 +1,26 @@
+{
+  "prepared_sha256": "6ac9483f98383be2fbc0070a64843a635b59a068a86b6ec75fbbb5645dc29994",
+  "source_evidence_sha256": "e20377e65aa937bda243e39b92ed57c1795c77d37369998d1fb03653fbdb9f75",
+  "source_package_sha256": "e001f24317aaa9daa80e105d41ecf33b329daa26d33cd9eeab4b76756d633202",
+  "source": "CN1.00 original hashes matched dot aca9db6 verified-intake; current area3 10:09/Continue01:55 contract remains authority",
+  "scope": "prepared resource/source-only identity, no running G3 claims",
+  "page_counts": {
+    "164": 46,
+    "165": 73,
+    "218": 1
+  },
+  "common_command_counts": {
+    "4": 1143,
+    "11": 326,
+    "12": 38,
+    "24": 82,
+    "25": 82,
+    "38": 36,
+    "55": 35,
+    "101": 206,
+    "102": 11,
+    "103": 13,
+    "140": 61,
+    "141": 35
+  }
+}

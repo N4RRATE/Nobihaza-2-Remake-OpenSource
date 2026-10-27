@@ -1,0 +1,9 @@
+#include "combat_presentation.h"
+#include "g1_piano_driver.h"
+#include "scene_renderer.h"
+// Isolated offscreen render fixture; no natural-save or user-window modification.
+int main(int argc,char**argv){try{need(argc==4,"G3 package source isolated-output");auto c=loadCombatContent(argv[1]);auto saved=decodeSave(c,read(argv[2]));auto e=c.entries.at("post-pickup");e.map=165;e.playerTile={9,12};e.direction=Direction::Up;e.session=saved.session;e.pages.clear();e.positions.clear();e.directions.clear();e.through.clear();c.entries["g3-render"]=e;GameApplication game(c,"g3-render",safe);sf::Font font;need(font.openFromFile(game.definition().fontPath),"Missing font");CombatPresentation present(c,font);sf::RenderTexture surface({320,240});auto root=std::filesystem::path(argv[3]);std::filesystem::create_directories(root);
+ auto tick=[&](InputFrame in=InputFrame{}){game.update(in);auto events=game.takePresentation();std::erase_if(events,[](const auto& e){return e.kind==PresentationEvent::Kind::Music||e.kind==PresentationEvent::Kind::Sound;});present.update(events);};
+ auto capture=[&](const std::string& name){auto xy=game.cameraCenter();surface.setView(sf::View({float(xy.x),float(xy.y)},{320,240}));surface.clear(sf::Color::Black);SceneRenderer renderer(game.definition());renderer.draw(surface,game.world(),present.characterFlashes());present.draw(surface,game);surface.display();need(surface.getTexture().copyToImage().saveToFile(root/(name+".png")),"Cannot save frame");};
+ for(int n=0;n<4000&&(n==0||!game.session().flag(441)||game.foreground()!=ForegroundKind::None);++n){tick(n%8==0?key():InputFrame{});}need(game.session().flag(586),"Render intro failed");capture("battle-initial");for(int n=0;n<500;++n){tick(n%8==0?key():InputFrame{});if(n==150){capture("battle-neck");}if(n==350){capture("battle-tentacle");}}std::cout<<"G3 original sheets/tall segments/scene anchors rendered\n";
+}catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}
