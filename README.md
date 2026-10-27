@@ -8,7 +8,7 @@
 
 ## 获取游戏
 
-源码可直接克隆本仓库。运行资源通过 [Releases](https://github.com/N4RRATE/Nobihaza-2-Remake-OpenSource/releases) 分发，目前正在上传；Mac 应用发行包将随后提供。
+v1.0.0 将提供 **DMG 拖拽安装版**和 **ZIP 免安装轻量版**，均包含完整游戏及运行资源，仅支持 macOS arm64。发行包及源码运行资源将通过 [Releases](https://github.com/N4RRATE/Nobihaza-2-Remake-OpenSource/releases) 提供，目前尚未开放下载。
 
 ## 编译与运行
 
