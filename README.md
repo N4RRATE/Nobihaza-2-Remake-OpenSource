@@ -1,6 +1,6 @@
 # Nobihaza 2 Remake
 
-这是一个使用 C++20/SFML 复刻《野比大雄的生化危机》原版二代的学习项目。本仓库包含当前完整的游戏实现、七份预制内容 include、原文测试基准、开发目标和测试，无需私有内容输入即可编译 `nobihaza` 游戏。图片、音乐、地图、字体等预制运行资源通过公开 Release 单独分发，可用一条命令恢复。
+这是通过 **Vibe Coding** 方式，使用 **C++20 / SFML** 重构的《野比大雄的生化危机2》（**野生2**）。本仓库包含当前完整的游戏实现、七份预制内容 include、原文测试基准、开发目标和测试，无需私有内容输入即可编译 `nobihaza` 游戏。图片、音乐、地图、字体等预制运行资源通过公开 Release 单独分发，可用一条命令恢复。
 
 项目实现和文档适用 [LICENSE](LICENSE) 中限定范围的 MIT 许可。原游戏及翻译内容、生成的事件程序、原文测试基准、角色、音乐、图片、字体、依赖和商标保留各自的归属与条款，详见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。公开这些文件不会将原作改授 MIT 许可，也不代表已建立完整的第三方授权链。
 
@@ -47,4 +47,4 @@ cmake --build build/local --target room_map_checks g7_score_rules
 
 七份已审定的 `.inc` 文件已足以支持正常编译。`tools/public_source_lower.py` 和 `tools/public-compile-contract.json` 保留现有的可选固定输入再生成边界，并不构成完整的原始 RPG Maker 工程导入器。本仓库不包含运行资源制作工具、原始作者工程、私有参考与证据历史、正式存档或凭据。`PUBLIC-SOURCE-MANIFEST.json` 记录已审定导出的来源与摘要；导出工具供维护者配合原准备目录使用，不能代替游戏构建命令。
 
-本项目包含学习者编写和 Codex 辅助实现的内容，不声称学习者独立实现或掌握了每个模块。源码构建成功、运行资源恢复校验通过，不能代替完整玩法验收、Windows 测试或公证发行。
+项目采用 Vibe Coding 开发方式，包含 Codex 辅助实现。源码构建成功、运行资源恢复校验通过，不能代替完整玩法验收、Windows 测试或公证发行。

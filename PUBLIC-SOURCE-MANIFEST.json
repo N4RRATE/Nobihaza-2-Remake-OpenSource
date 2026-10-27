@@ -35,7 +35,7 @@
     {
       "source": "docs/release/public-complete-templates/README.md",
       "path": "README.md",
-      "sha256": "437edd118965b3bf52903f54f7d827ad168f4ab5fdafd7893ff2d1a3098901c4",
+      "sha256": "c3fde8027f750504c1e8de348639660b0afe9e8e04fcb917382def0a8e49e307",
       "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
     },
     {
