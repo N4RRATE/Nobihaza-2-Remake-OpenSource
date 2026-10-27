@@ -35,13 +35,13 @@
     {
       "source": "docs/release/public-complete-templates/README.md",
       "path": "README.md",
-      "sha256": "d6a4894d17a50c0810df40f272872d0a61cca704eabe2f32eb3451a816e58c8d",
+      "sha256": "437edd118965b3bf52903f54f7d827ad168f4ab5fdafd7893ff2d1a3098901c4",
       "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
     },
     {
       "source": "docs/release/public-complete-templates/THIRD-PARTY-NOTICES.md",
       "path": "THIRD-PARTY-NOTICES.md",
-      "sha256": "974842bdf63990fec68e5dc1ee1d8789de93f007e7c609bcae3fff3545295472",
+      "sha256": "dc058a8867d535f2c94e971043c051ae49ef900197fbb193c03cdb4ce3c8750a",
       "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
     },
     {
