@@ -5,7 +5,7 @@
   "license_scope": "MIT covers handwritten project implementation/documentation only; original-expression includes/text goldens, original content/assets/fonts/music, dependencies and trademarks retain their own rights and terms",
   "requirements": [
     "C++20 compiler, CMake >=3.28, Ninja and pinned dependencies; no private content input is required to build nobihaza",
-    "Use tools/fetch_runtime.py to restore the separately distributed, hash-locked runtime before playing; Windows and full gameplay acceptance are separate"
+    "Use the runtime directory in the published macOS release ZIP when running a source build; Windows validation is separate"
   ],
   "files": [
     {
@@ -35,7 +35,7 @@
     {
       "source": "docs/release/public-complete-templates/README.md",
       "path": "README.md",
-      "sha256": "e645290acb5021dbabe13306a10227179fa07ad59cae9a102337d653d74ad33a",
+      "sha256": "7f976611cdce692490e1255241d7eebc08ddfc59b8cf15188f8f2388a09c6cfc",
       "basis": "complete-source build/documentation template; scoped project license and retained original-content boundaries"
     },
     {

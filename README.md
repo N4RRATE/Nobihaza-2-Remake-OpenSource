@@ -8,17 +8,16 @@
 
 ## 获取游戏
 
-v1.0.0 将提供 **DMG 拖拽安装版**和 **ZIP 免安装轻量版**，均包含完整游戏及运行资源，仅支持 macOS arm64。发行包及源码运行资源将通过 [Releases](https://github.com/N4RRATE/Nobihaza-2-Remake-OpenSource/releases) 提供，目前尚未开放下载。
+[v1.0.0 已发布](https://github.com/N4RRATE/Nobihaza-2-Remake-OpenSource/releases/tag/v1.0.0)：**DMG 拖拽安装版**和 **ZIP 免安装轻量版**均包含完整游戏及运行资源，仅支持 macOS arm64，不含玩家存档。当前版本未经 Apple 公证。
 
 ## 编译与运行
 
-需要 C++20 编译器、CMake 3.28+、Ninja 和 Python 3；首次编译会下载依赖。资源上传完成后，在仓库根目录执行：
+需要 C++20 编译器、CMake 3.28+ 和 Ninja；首次编译会下载依赖。下载并解压上述 ZIP，将其中的 `Nobihaza 2 Remake.app` 放到仓库根目录作为运行资源来源，然后执行：
 
 ```sh
 cmake --preset mac-release
 cmake --build --preset mac-release
-python3 tools/fetch_runtime.py --destination assets/runtime
-./build/mac-release/bin/nobihaza assets/runtime/content.json --entry title
+./build/mac-release/bin/nobihaza "Nobihaza 2 Remake.app/Contents/Resources/runtime/content.json" --entry title
 ```
 
 ## 键位
